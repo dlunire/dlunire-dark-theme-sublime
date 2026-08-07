@@ -106,7 +106,7 @@
             ],
             "color": "var(dl_accent)"
         },
-        // Iconos de la Barra Lateral
+        // Iconos de Carpetas y Desplegables
         {
             "class": "icon_folder",
             "layer0.tint": "var(dl_text)",
@@ -177,10 +177,11 @@
             ],
             "layer0.tint": "var(dl_accent)"
         },
+        // Iconos de Archivos (Restaurando colores nativos)
         {
             "class": "icon_file_type",
-            "layer0.opacity": 1.0,
-            "layer0.tint": "var(dl_text)"
+            "layer0.tint": "",
+            "layer0.opacity": 0.7
         },
         {
             "class": "icon_file_type",
@@ -192,7 +193,7 @@
                     ]
                 }
             ],
-            "layer0.tint": "var(dl_text_bright)"
+            "layer0.opacity": 1.0
         },
         {
             "class": "icon_file_type",
@@ -204,7 +205,7 @@
                     ]
                 }
             ],
-            "layer0.tint": ""
+            "layer0.opacity": 1.0
         },
         // =========================================================
         // SISTEMA DE PESTAÑAS (Tabs)
@@ -220,7 +221,6 @@
             "layer0.texture": "",
             "layer0.tint": "var(dl_panel)",
             "layer0.opacity": 1.0,
-            // Borde perimetral blanco al 70% para pestañas inactivas
             "layer1.texture": "",
             "layer1.opacity": 1.0,
             "layer1.draw_center": false,
@@ -251,7 +251,6 @@
                 "selected"
             ],
             "layer0.tint": "var(dl_background)",
-            // Borde base para pestaña activa
             "layer1.opacity": 1.0,
             "layer1.draw_center": false,
             "layer1.inner_margin": [
@@ -261,7 +260,6 @@
                 0
             ],
             "layer1.tint": "var(dl_border)",
-            // Borde superior turquesa
             "layer2.opacity": 1.0,
             "layer2.draw_center": false,
             "layer2.inner_margin": [
@@ -274,7 +272,6 @@
         },
         {
             "class": "tab_label",
-            // Texto inactivo mucho más claro
             "color": "var(dl_tab_inactive_text)"
         },
         {
@@ -374,7 +371,7 @@
             "layer1.inner_margin": 1
         },
         // =========================================================
-        // BARRAS DE DESPLAZAMIENTO (Scrollbars)
+        // BARRAS DE DESPLAZAMIENTO
         // =========================================================
         {
             "class": "scroll_bar_control",
@@ -401,24 +398,6 @@
                 "pressed"
             ],
             "layer0.opacity": 1.0
-        },
-        // =========================================================
-        // MINIMAPA (Minimap Viewport)
-        // =========================================================
-        {
-            "class": "viewport_control",
-            "layer0.texture": "",
-            // Turquesa al 10% de opacidad para el área visible
-            "layer0.tint": "var(dl_accent)",
-            "layer0.opacity": 0.1
-        },
-        {
-            "class": "viewport_control",
-            "attributes": [
-                "hover"
-            ],
-            // Sube al 20% al pasar el ratón para dar feedback
-            "layer0.opacity": 0.2
         },
         // =========================================================
         // BARRA DE ESTADO
