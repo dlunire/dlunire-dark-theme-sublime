@@ -1,135 +1,249 @@
 {
     "extends": "Adaptive.sublime-theme",
+    "variables": {
+        "dl_background": "#010305",
+        "dl_panel": "#05080C",
+        "dl_sidebar": "#030508",
+        "dl_hover": "#0A1017",
+        "dl_active": "#0D1B2A",
+        "dl_text_muted": "#656565",
+        "dl_text": "#A1A1A1",
+        "dl_text_bright": "#FFFFFF",
+        "dl_accent": "#00E8FF"
+    },
     "rules": [
         {
+            "class": "title_bar",
+            "bg": "var(dl_background)",
+            "fg": "var(dl_text_bright)"
+        },
+        {
+            "class": "menu",
+            "layer0.tint": "var(dl_panel)",
+            "layer0.opacity": 1.0
+        },
+        {
             "class": "sidebar_container",
-            "layer0.tint": "#030508",
+            "layer0.tint": "var(dl_sidebar)",
             "layer0.opacity": 1.0
         },
         {
             "class": "sidebar_tree",
-            "row_padding": [12, 6],
+            "row_padding": [
+                12,
+                6
+            ],
             "indent_offset": 12,
             "indent": 14
         },
         {
             "class": "tree_row",
-            "layer0.tint": [0, 0, 0, 0],
+            "layer0.tint": [
+                0,
+                0,
+                0,
+                0
+            ],
             "layer0.opacity": 1.0
         },
         {
             "class": "tree_row",
-            "attributes": ["hover"],
-            "layer0.tint": "#0A1017"
+            "attributes": [
+                "hover"
+            ],
+            "layer0.tint": "var(dl_hover)"
         },
         {
             "class": "tree_row",
-            "attributes": ["selected"],
-            "layer0.tint": "#0D1B2A"
+            "attributes": [
+                "selected"
+            ],
+            "layer0.tint": "var(dl_active)"
         },
         {
             "class": "sidebar_heading",
-            "color": "#FFFFFF",
+            "color": "var(dl_text_bright)",
             "font.bold": true
         },
         {
             "class": "sidebar_label",
-            "color": "#A1A1A1"
+            "color": "var(dl_text)"
         },
         {
             "class": "sidebar_label",
-            "parents": [{"class": "tree_row", "attributes": ["hover"]}],
-            "color": "#FFFFFF"
+            "parents": [
+                {
+                    "class": "tree_row",
+                    "attributes": [
+                        "hover"
+                    ]
+                }
+            ],
+            "color": "var(dl_text_bright)"
         },
         {
             "class": "sidebar_label",
-            "parents": [{"class": "tree_row", "attributes": ["selected"]}],
-            "color": "#00E8FF"
+            "parents": [
+                {
+                    "class": "tree_row",
+                    "attributes": [
+                        "selected"
+                    ]
+                }
+            ],
+            "color": "var(dl_accent)"
         },
         {
             "class": "icon_folder",
-            "layer0.tint": "#656565"
+            "layer0.tint": "var(dl_text_muted)",
+            "layer0.opacity": 1.0
         },
         {
             "class": "icon_folder",
-            "parents": [{"class": "tree_row", "attributes": ["hover"]}],
-            "layer0.tint": "#A1A1A1"
+            "parents": [
+                {
+                    "class": "tree_row",
+                    "attributes": [
+                        "hover"
+                    ]
+                }
+            ],
+            "layer0.tint": "var(dl_text_bright)"
         },
         {
             "class": "icon_folder",
-            "parents": [{"class": "tree_row", "attributes": ["expanded"]}],
-            "layer0.tint": "#00E8FF"
+            "parents": [
+                {
+                    "class": "tree_row",
+                    "attributes": [
+                        "expanded"
+                    ]
+                }
+            ],
+            "layer0.tint": "var(dl_text)"
         },
         {
             "class": "icon_folder",
-            "parents": [{"class": "tree_row", "attributes": ["selected"]}],
-            "layer0.tint": "#00E8FF"
+            "parents": [
+                {
+                    "class": "tree_row",
+                    "attributes": [
+                        "selected"
+                    ]
+                }
+            ],
+            "layer0.tint": "var(dl_accent)"
         },
         {
             "class": "disclosure_button_control",
-            "layer0.tint": "#656565"
+            "layer0.tint": "var(dl_text_muted)",
+            "layer0.opacity": 1.0
         },
         {
             "class": "disclosure_button_control",
-            "parents": [{"class": "tree_row", "attributes": ["hover"]}],
-            "layer0.tint": "#A1A1A1"
+            "parents": [
+                {
+                    "class": "tree_row",
+                    "attributes": [
+                        "hover"
+                    ]
+                }
+            ],
+            "layer0.tint": "var(dl_text_bright)"
         },
         {
             "class": "disclosure_button_control",
-            "parents": [{"class": "tree_row", "attributes": ["selected"]}],
-            "layer0.tint": "#00E8FF"
+            "parents": [
+                {
+                    "class": "tree_row",
+                    "attributes": [
+                        "selected"
+                    ]
+                }
+            ],
+            "layer0.tint": "var(dl_accent)"
         },
         {
             "class": "icon_file_type",
             "layer0.opacity": 1.0,
-            "layer0.tint": "#A1A1A1"
+            "layer0.tint": "var(dl_text)"
         },
         {
             "class": "icon_file_type",
-            "parents": [{"class": "tree_row", "attributes": ["hover"]}],
-            "layer0.tint": "#FFFFFF"
+            "parents": [
+                {
+                    "class": "tree_row",
+                    "attributes": [
+                        "hover"
+                    ]
+                }
+            ],
+            "layer0.tint": "var(dl_text_bright)"
         },
         {
             "class": "icon_file_type",
-            "parents": [{"class": "tree_row", "attributes": ["selected"]}],
+            "parents": [
+                {
+                    "class": "tree_row",
+                    "attributes": [
+                        "selected"
+                    ]
+                }
+            ],
             "layer0.tint": ""
         },
         {
             "class": "tabset",
-            "layer0.tint": "#010305"
+            "layer0.tint": "var(dl_background)"
         },
         {
             "class": "tab_control",
-            "layer0.tint": "#05080C",
+            "layer0.tint": "var(dl_panel)",
             "layer0.opacity": 1.0,
-            "content_margin": [16, 8]
+            "content_margin": [
+                16,
+                8
+            ]
         },
         {
             "class": "tab_control",
-            "attributes": ["selected"],
-            "layer0.tint": "#0A1017"
+            "attributes": [
+                "selected"
+            ],
+            "layer0.tint": "var(dl_hover)"
         },
         {
             "class": "tab_label",
-            "color": "#656565"
+            "color": "var(dl_text)"
         },
         {
             "class": "tab_label",
-            "parents": [{"class": "tab_control", "attributes": ["selected"]}],
-            "color": "#00e1ff"
+            "parents": [
+                {
+                    "class": "tab_control",
+                    "attributes": [
+                        "selected"
+                    ]
+                }
+            ],
+            "color": "var(dl_accent)"
         },
         {
             "class": "status_bar",
-            "layer0.tint": "#010305"
+            "layer0.tint": "var(dl_background)"
         },
         {
             "class": "label_control",
-            "parents": [{"class": "status_bar"}],
-            "color": "#A1A1A1"
+            "parents": [
+                {
+                    "class": "status_bar"
+                }
+            ],
+            "color": "var(dl_text)"
         },
         {
             "class": "overlay_control",
-            "layer0.tint": "#05080C"
+            "layer0.tint": "var(dl_panel)"
         },
         {
             "class": "text_line_control",
