@@ -194,27 +194,60 @@
         },
         {
             "class": "tabset",
-            "layer0.tint": "var(dl_background)"
+            "layer0.texture": "",
+            "layer0.tint": "var(dl_background)",
+            "layer0.opacity": 1.0
         },
         {
             "class": "tab_control",
+            "layer0.texture": "",
             "layer0.tint": "var(dl_panel)",
             "layer0.opacity": 1.0,
+            "layer1.texture": "",
+            "layer1.opacity": 0.0,
             "content_margin": [
-                16,
-                8
+                20,
+                10
             ]
+        },
+        {
+            "class": "tab_control",
+            "attributes": [
+                "hover"
+            ],
+            "layer0.tint": "var(dl_hover)"
         },
         {
             "class": "tab_control",
             "attributes": [
                 "selected"
             ],
-            "layer0.tint": "var(dl_hover)"
+            "layer0.tint": "var(dl_hover)",
+            "layer1.opacity": 1.0,
+            "layer1.draw_center": false,
+            "layer1.inner_margin": [
+                0,
+                2,
+                0,
+                0
+            ],
+            "layer1.tint": "var(dl_accent)"
         },
         {
             "class": "tab_label",
-            "color": "var(dl_text)"
+            "color": "var(dl_text_muted)"
+        },
+        {
+            "class": "tab_label",
+            "parents": [
+                {
+                    "class": "tab_control",
+                    "attributes": [
+                        "hover"
+                    ]
+                }
+            ],
+            "color": "var(dl_text_bright)"
         },
         {
             "class": "tab_label",
@@ -227,6 +260,34 @@
                 }
             ],
             "color": "var(dl_accent)"
+        },
+        {
+            "class": "tab_close_button",
+            "layer0.tint": "var(dl_text_muted)"
+        },
+        {
+            "class": "tab_close_button",
+            "parents": [
+                {
+                    "class": "tab_control",
+                    "attributes": [
+                        "hover"
+                    ]
+                }
+            ],
+            "layer0.tint": "var(dl_text_bright)"
+        },
+        {
+            "class": "tab_close_button",
+            "parents": [
+                {
+                    "class": "tab_control",
+                    "attributes": [
+                        "selected"
+                    ]
+                }
+            ],
+            "layer0.tint": "var(dl_accent)"
         },
         {
             "class": "status_bar",
