@@ -11,7 +11,9 @@
         "dl_text": "#A1A1A1",
         "dl_text_bright": "#FFFFFF",
         "dl_accent": "#00E8FF",
-        "dl_input": "#080D14"
+        "dl_input": "#080D14",
+        "dl_tab_inactive_border": "#FFFFFFB2",
+        "dl_tab_inactive_text": "#FFFFFFB2"
     },
     "rules": [
         // =========================================================
@@ -218,8 +220,18 @@
             "layer0.texture": "",
             "layer0.tint": "var(dl_panel)",
             "layer0.opacity": 1.0,
+            // Borde perimetral para pestañas inactivas
             "layer1.texture": "",
-            "layer1.opacity": 0.0,
+            "layer1.opacity": 1.0,
+            "layer1.draw_center": false,
+            "layer1.inner_margin": [
+                1,
+                1,
+                1,
+                1
+            ],
+            "layer1.tint": "var(dl_tab_inactive_border)",
+            // Capa 2 reservada para el acento superior (activa)
             "layer2.texture": "",
             "layer2.opacity": 0.0,
             "content_margin": [
@@ -241,7 +253,7 @@
             ],
             // Fondo igual al editor
             "layer0.tint": "var(dl_background)",
-            // Bordes laterales sutiles [Izquierda, Arriba, Derecha, Abajo]
+            // Sobreescribimos la capa 1 (bordes) para la pestaña activa
             "layer1.opacity": 1.0,
             "layer1.draw_center": false,
             "layer1.inner_margin": [
@@ -251,7 +263,7 @@
                 0
             ],
             "layer1.tint": "var(dl_border)",
-            // Borde superior turquesa
+            // Activamos la capa 2: Borde superior turquesa
             "layer2.opacity": 1.0,
             "layer2.draw_center": false,
             "layer2.inner_margin": [
@@ -264,8 +276,8 @@
         },
         {
             "class": "tab_label",
-            // Aumentado el contraste de pestañas inactivas
-            "color": "var(dl_text)"
+            // Texto inactivo elevado a blanco 70%
+            "color": "var(dl_tab_inactive_text)"
         },
         {
             "class": "tab_label",
@@ -375,7 +387,6 @@
         {
             "class": "puck_control",
             "layer0.texture": "",
-            // Color de acento (Turquesa) al 50% de opacidad
             "layer0.tint": "var(dl_accent)",
             "layer0.opacity": 0.5
         },
