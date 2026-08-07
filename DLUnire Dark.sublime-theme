@@ -13,7 +13,7 @@
         "dl_accent": "#00E8FF",
         "dl_input": "#080D14",
         "dl_tab_inactive_border": "#FFFFFFB2",
-        "dl_tab_inactive_text": "#FFFFFFB2"
+        "dl_tab_inactive_text": "#FFFFFFE6"
     },
     "rules": [
         // =========================================================
@@ -220,7 +220,7 @@
             "layer0.texture": "",
             "layer0.tint": "var(dl_panel)",
             "layer0.opacity": 1.0,
-            // Borde perimetral para pestañas inactivas
+            // Borde perimetral blanco al 70% para pestañas inactivas
             "layer1.texture": "",
             "layer1.opacity": 1.0,
             "layer1.draw_center": false,
@@ -231,7 +231,6 @@
                 1
             ],
             "layer1.tint": "var(dl_tab_inactive_border)",
-            // Capa 2 reservada para el acento superior (activa)
             "layer2.texture": "",
             "layer2.opacity": 0.0,
             "content_margin": [
@@ -251,9 +250,8 @@
             "attributes": [
                 "selected"
             ],
-            // Fondo igual al editor
             "layer0.tint": "var(dl_background)",
-            // Sobreescribimos la capa 1 (bordes) para la pestaña activa
+            // Borde base para pestaña activa
             "layer1.opacity": 1.0,
             "layer1.draw_center": false,
             "layer1.inner_margin": [
@@ -263,7 +261,7 @@
                 0
             ],
             "layer1.tint": "var(dl_border)",
-            // Activamos la capa 2: Borde superior turquesa
+            // Borde superior turquesa
             "layer2.opacity": 1.0,
             "layer2.draw_center": false,
             "layer2.inner_margin": [
@@ -276,7 +274,7 @@
         },
         {
             "class": "tab_label",
-            // Texto inactivo elevado a blanco 70%
+            // Texto inactivo mucho más claro
             "color": "var(dl_tab_inactive_text)"
         },
         {
@@ -376,7 +374,7 @@
             "layer1.inner_margin": 1
         },
         // =========================================================
-        // BARRAS DE DESPLAZAMIENTO (Turquesa con transparencia)
+        // BARRAS DE DESPLAZAMIENTO (Scrollbars)
         // =========================================================
         {
             "class": "scroll_bar_control",
@@ -403,6 +401,24 @@
                 "pressed"
             ],
             "layer0.opacity": 1.0
+        },
+        // =========================================================
+        // MINIMAPA (Minimap Viewport)
+        // =========================================================
+        {
+            "class": "viewport_control",
+            "layer0.texture": "",
+            // Turquesa al 10% de opacidad para el área visible
+            "layer0.tint": "var(dl_accent)",
+            "layer0.opacity": 0.1
+        },
+        {
+            "class": "viewport_control",
+            "attributes": [
+                "hover"
+            ],
+            // Sube al 20% al pasar el ratón para dar feedback
+            "layer0.opacity": 0.2
         },
         // =========================================================
         // BARRA DE ESTADO
