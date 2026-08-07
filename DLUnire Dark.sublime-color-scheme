@@ -17,7 +17,6 @@
         "pink": "#F50057"
     },
     "rules": [
-        // --- Sidebar ---
         {
             "class": "sidebar_container",
             "layer0.tint": "var(bg-alt2)",
@@ -54,8 +53,6 @@
             "layer0.tint": "var(selection)",
             "layer0.opacity": 1.0
         },
-
-        // --- Tabs ---
         {
             "class": "tabset_control",
             "layer0.tint": "var(bg-alt)",
@@ -92,8 +89,6 @@
             "attributes": ["dirty"],
             "color": "var(orange-soft)"
         },
-
-        // --- Status bar ---
         {
             "class": "status_bar",
             "layer0.tint": "var(bg)",
@@ -104,8 +99,6 @@
             "parents": [{"class": "status_container"}],
             "color": "var(fg-muted)"
         },
-
-        // --- Scrollbars ---
         {
             "class": "scroll_bar_control",
             "layer0.tint": "var(bg-alt)",
@@ -121,8 +114,6 @@
             "layer0.tint": "var(cyan-soft)",
             "layer0.opacity": 0.4
         },
-
-        // --- Command Palette / Goto Anything / autocomplete ---
         {
             "class": "overlay_control",
             "layer0.tint": "var(bg-alt2)",
@@ -145,8 +136,6 @@
             "layer0.tint": "var(bg-alt2)",
             "layer0.opacity": 1.0
         },
-
-        // --- Title bar (macOS / Linux dark chrome) ---
         {
             "class": "title_bar",
             "style": "dark"
@@ -157,8 +146,6 @@
             "fg": "var(fg)",
             "bg": "var(bg)"
         },
-
-        // --- Buttons / dialogs ---
         {
             "class": "button_control",
             "layer0.tint": "var(bg-alt)",
@@ -169,8 +156,6 @@
             "parents": [{"class": "button_control"}],
             "color": "var(fg)"
         },
-
-        // --- Find/Replace input fields tint to match editor background ---
         {
             "class": "text_line_control",
             "color_scheme_tint": "var(bg-alt2)"
