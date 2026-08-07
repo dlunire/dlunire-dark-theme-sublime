@@ -8,7 +8,10 @@
         "selection": "#10324C",
         "gutter": "#010305",
         "gutter_foreground": "#2A3846",
-        "misspelling": "#F50057"
+        "misspelling": "#F50057",
+        // Configuración del Minimapa
+        "minimap_overlay": "#00E8FF1A",
+        "minimap_border": "#00E8FF4D"
     },
     "rules": [
         {
