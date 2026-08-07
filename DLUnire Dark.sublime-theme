@@ -177,10 +177,10 @@
             ],
             "layer0.tint": "var(dl_accent)"
         },
-        // Iconos de Archivos (Restaurando colores nativos)
+        // Iconos de Archivos (Corregido para preservar color)
         {
             "class": "icon_file_type",
-            "layer0.tint": "",
+            "layer0.tint": "var(dl_text_bright)",
             "layer0.opacity": 0.7
         },
         {
@@ -193,6 +193,7 @@
                     ]
                 }
             ],
+            "layer0.tint": "var(dl_text_bright)",
             "layer0.opacity": 1.0
         },
         {
@@ -205,6 +206,7 @@
                     ]
                 }
             ],
+            "layer0.tint": "var(dl_text_bright)",
             "layer0.opacity": 1.0
         },
         // =========================================================
