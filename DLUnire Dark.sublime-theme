@@ -6,12 +6,17 @@
         "dl_sidebar": "#030508",
         "dl_hover": "#0A1017",
         "dl_active": "#0D1B2A",
+        "dl_border": "#2A3846",
         "dl_text_muted": "#656565",
         "dl_text": "#A1A1A1",
         "dl_text_bright": "#FFFFFF",
-        "dl_accent": "#00E8FF"
+        "dl_accent": "#00E8FF",
+        "dl_input": "#080D14"
     },
     "rules": [
+        // =========================================================
+        // VENTANA Y MENÚS (Nativo de ST4)
+        // =========================================================
         {
             "class": "title_bar",
             "bg": "var(dl_background)",
@@ -19,11 +24,16 @@
         },
         {
             "class": "menu",
+            "layer0.texture": "",
             "layer0.tint": "var(dl_panel)",
             "layer0.opacity": 1.0
         },
+        // =========================================================
+        // BARRA LATERAL (Sidebar)
+        // =========================================================
         {
             "class": "sidebar_container",
+            "layer0.texture": "",
             "layer0.tint": "var(dl_sidebar)",
             "layer0.opacity": 1.0
         },
@@ -38,6 +48,7 @@
         },
         {
             "class": "tree_row",
+            "layer0.texture": "",
             "layer0.tint": [
                 0,
                 0,
@@ -93,6 +104,7 @@
             ],
             "color": "var(dl_accent)"
         },
+        // Iconos de la Barra Lateral
         {
             "class": "icon_folder",
             "layer0.tint": "var(dl_text_muted)",
@@ -192,6 +204,9 @@
             ],
             "layer0.tint": ""
         },
+        // =========================================================
+        // SISTEMA DE PESTAÑAS (Tabs) - Replicando el borde superior
+        // =========================================================
         {
             "class": "tabset",
             "layer0.texture": "",
@@ -203,6 +218,7 @@
             "layer0.texture": "",
             "layer0.tint": "var(dl_panel)",
             "layer0.opacity": 1.0,
+            // Layer 1 se reserva para dibujar el borde superior celeste
             "layer1.texture": "",
             "layer1.opacity": 0.0,
             "content_margin": [
@@ -222,7 +238,8 @@
             "attributes": [
                 "selected"
             ],
-            "layer0.tint": "var(dl_hover)",
+            "layer0.tint": "var(dl_hover)", // Fondo oscuro de DLUnire (#0A1017)
+            // Activamos el borde superior
             "layer1.opacity": 1.0,
             "layer1.draw_center": false,
             "layer1.inner_margin": [
@@ -230,8 +247,8 @@
                 2,
                 0,
                 0
-            ],
-            "layer1.tint": "var(dl_accent)"
+            ], // Dibuja solo 2px arriba
+            "layer1.tint": "var(dl_accent)" // Borde #00E8FF
         },
         {
             "class": "tab_label",
@@ -289,8 +306,86 @@
             ],
             "layer0.tint": "var(dl_accent)"
         },
+        // =========================================================
+        // PALETA DE COMANDOS Y BÚSQUEDA (Quick Panel / Inputs)
+        // =========================================================
+        {
+            "class": "overlay_control",
+            "layer0.texture": "",
+            "layer0.tint": "var(dl_panel)",
+            "layer0.opacity": 1.0
+        },
+        {
+            "class": "quick_panel",
+            "row_padding": [
+                12,
+                6
+            ],
+            "layer0.tint": "var(dl_panel)"
+        },
+        {
+            "class": "mini_quick_panel_row",
+            "layer0.tint": [
+                0,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "class": "mini_quick_panel_row",
+            "attributes": [
+                "selected"
+            ],
+            "layer0.tint": "var(dl_active)"
+        },
+        {
+            "class": "text_line_control",
+            "layer0.texture": "",
+            "layer0.tint": "var(dl_input)",
+            "layer0.opacity": 1.0,
+            "layer1.texture": "",
+            "layer1.tint": "var(dl_border)",
+            "layer1.opacity": 1.0,
+            "layer1.draw_center": false,
+            "layer1.inner_margin": 1
+        },
+        // =========================================================
+        // BARRAS DE DESPLAZAMIENTO (Scrollbars)
+        // =========================================================
+        {
+            "class": "scroll_bar_control",
+            "layer0.texture": "",
+            "layer0.tint": "var(dl_sidebar)",
+            "layer0.opacity": 1.0
+        },
+        {
+            "class": "puck_control",
+            "layer0.texture": "",
+            "layer0.tint": "var(dl_border)",
+            "layer0.opacity": 0.5
+        },
+        {
+            "class": "puck_control",
+            "attributes": [
+                "hover"
+            ],
+            "layer0.opacity": 0.8
+        },
+        {
+            "class": "puck_control",
+            "attributes": [
+                "pressed"
+            ],
+            "layer0.tint": "var(dl_text_muted)",
+            "layer0.opacity": 1.0
+        },
+        // =========================================================
+        // BARRA DE ESTADO (Status Bar)
+        // =========================================================
         {
             "class": "status_bar",
+            "layer0.texture": "",
             "layer0.tint": "var(dl_background)"
         },
         {
@@ -303,12 +398,10 @@
             "color": "var(dl_text)"
         },
         {
-            "class": "overlay_control",
-            "layer0.tint": "var(dl_panel)"
-        },
-        {
-            "class": "text_line_control",
-            "layer0.tint": "#080D14"
+            "class": "panel_control",
+            "layer0.texture": "",
+            "layer0.tint": "var(dl_panel)",
+            "layer0.opacity": 1.0
         }
     ]
 }
