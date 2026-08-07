@@ -1,98 +1,101 @@
-[
-    {
-        "class": "sidebar_container",
-        "layer0.tint": "#030508"
-    },
-    {
-        "class": "sidebar_tree",
-        "row_padding": [
-            8,
-            4
-        ]
-    },
-    {
-        "class": "sidebar_label",
-        "color": "#A1A1A1"
-    },
-    {
-        "class": "sidebar_label",
-        "parents": [
-            {
-                "class": "tree_row",
-                "attributes": [
-                    "selected"
-                ]
-            }
-        ],
-        "color": "#FFFFFF"
-    },
-    {
-        "class": "tree_row",
-        "attributes": [
-            "selected"
-        ],
-        "layer0.tint": "#0D1B2A"
-    },
-    {
-        "class": "sidebar_heading",
-        "color": "#FFFFFF",
-        "font.bold": true
-    },
-    {
-        "class": "tabset",
-        "layer0.tint": "#010305"
-    },
-    {
-        "class": "tab_control",
-        "layer0.tint": "#05080C",
-        "layer0.opacity": 1.0,
-        "content_margin": [
-            16,
-            8
-        ]
-    },
-    {
-        "class": "tab_control",
-        "attributes": [
-            "selected"
-        ],
-        "layer0.tint": "#0A1017"
-    },
-    {
-        "class": "tab_label",
-        "color": "#656565"
-    },
-    {
-        "class": "tab_label",
-        "parents": [
-            {
-                "class": "tab_control",
-                "attributes": [
-                    "selected"
-                ]
-            }
-        ],
-        "color": "#00e1ff"
-    },
-    {
-        "class": "status_bar",
-        "layer0.tint": "#010305"
-    },
-    {
-        "class": "label_control",
-        "parents": [
-            {
-                "class": "status_bar"
-            }
-        ],
-        "color": "#A1A1A1"
-    },
-    {
-        "class": "overlay_control",
-        "layer0.tint": "#05080C"
-    },
-    {
-        "class": "text_line_control",
-        "layer0.tint": "#080D14"
-    }
-]
+{
+    "extends": "Default.sublime-theme",
+    "rules": [
+        {
+            "class": "sidebar_container",
+            "layer0.tint": "#030508"
+        },
+        {
+            "class": "sidebar_tree",
+            "row_padding": [
+                8,
+                4
+            ]
+        },
+        {
+            "class": "sidebar_label",
+            "color": "#A1A1A1"
+        },
+        {
+            "class": "sidebar_label",
+            "parents": [
+                {
+                    "class": "tree_row",
+                    "attributes": [
+                        "selected"
+                    ]
+                }
+            ],
+            "color": "#FFFFFF"
+        },
+        {
+            "class": "tree_row",
+            "attributes": [
+                "selected"
+            ],
+            "layer0.tint": "#0D1B2A"
+        },
+        {
+            "class": "sidebar_heading",
+            "color": "#FFFFFF",
+            "font.bold": true
+        },
+        {
+            "class": "tabset",
+            "layer0.tint": "#010305"
+        },
+        {
+            "class": "tab_control",
+            "layer0.tint": "#05080C",
+            "layer0.opacity": 1.0,
+            "content_margin": [
+                16,
+                8
+            ]
+        },
+        {
+            "class": "tab_control",
+            "attributes": [
+                "selected"
+            ],
+            "layer0.tint": "#0A1017"
+        },
+        {
+            "class": "tab_label",
+            "color": "#656565"
+        },
+        {
+            "class": "tab_label",
+            "parents": [
+                {
+                    "class": "tab_control",
+                    "attributes": [
+                        "selected"
+                    ]
+                }
+            ],
+            "color": "#00e1ff"
+        },
+        {
+            "class": "status_bar",
+            "layer0.tint": "#010305"
+        },
+        {
+            "class": "label_control",
+            "parents": [
+                {
+                    "class": "status_bar"
+                }
+            ],
+            "color": "#A1A1A1"
+        },
+        {
+            "class": "overlay_control",
+            "layer0.tint": "#05080C"
+        },
+        {
+            "class": "text_line_control",
+            "layer0.tint": "#080D14"
+        }
+    ]
+}
