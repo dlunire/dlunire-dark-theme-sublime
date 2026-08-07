@@ -15,7 +15,7 @@
     },
     "rules": [
         // =========================================================
-        // VENTANA Y MENÚS (Nativo de ST4)
+        // VENTANA Y MENÚS
         // =========================================================
         {
             "class": "title_bar",
@@ -107,7 +107,7 @@
         // Iconos de la Barra Lateral
         {
             "class": "icon_folder",
-            "layer0.tint": "var(dl_text_muted)",
+            "layer0.tint": "var(dl_text)",
             "layer0.opacity": 1.0
         },
         {
@@ -132,7 +132,7 @@
                     ]
                 }
             ],
-            "layer0.tint": "var(dl_text)"
+            "layer0.tint": "var(dl_text_bright)"
         },
         {
             "class": "icon_folder",
@@ -148,7 +148,7 @@
         },
         {
             "class": "disclosure_button_control",
-            "layer0.tint": "var(dl_text_muted)",
+            "layer0.tint": "var(dl_text)",
             "layer0.opacity": 1.0
         },
         {
@@ -205,7 +205,7 @@
             "layer0.tint": ""
         },
         // =========================================================
-        // SISTEMA DE PESTAÑAS (Tabs) - Replicando el borde superior
+        // SISTEMA DE PESTAÑAS (Tabs)
         // =========================================================
         {
             "class": "tabset",
@@ -218,9 +218,10 @@
             "layer0.texture": "",
             "layer0.tint": "var(dl_panel)",
             "layer0.opacity": 1.0,
-            // Layer 1 se reserva para dibujar el borde superior celeste
             "layer1.texture": "",
             "layer1.opacity": 0.0,
+            "layer2.texture": "",
+            "layer2.opacity": 0.0,
             "content_margin": [
                 20,
                 10
@@ -238,21 +239,33 @@
             "attributes": [
                 "selected"
             ],
-            "layer0.tint": "var(dl_hover)", // Fondo oscuro de DLUnire (#0A1017)
-            // Activamos el borde superior
+            // Fondo igual al editor
+            "layer0.tint": "var(dl_background)",
+            // Bordes laterales sutiles [Izquierda, Arriba, Derecha, Abajo]
             "layer1.opacity": 1.0,
             "layer1.draw_center": false,
             "layer1.inner_margin": [
+                1,
+                0,
+                1,
+                0
+            ],
+            "layer1.tint": "var(dl_border)",
+            // Borde superior turquesa
+            "layer2.opacity": 1.0,
+            "layer2.draw_center": false,
+            "layer2.inner_margin": [
                 0,
                 2,
                 0,
                 0
-            ], // Dibuja solo 2px arriba
-            "layer1.tint": "var(dl_accent)" // Borde #00E8FF
+            ],
+            "layer2.tint": "var(dl_accent)"
         },
         {
             "class": "tab_label",
-            "color": "var(dl_text_muted)"
+            // Aumentado el contraste de pestañas inactivas
+            "color": "var(dl_text)"
         },
         {
             "class": "tab_label",
@@ -280,7 +293,7 @@
         },
         {
             "class": "tab_close_button",
-            "layer0.tint": "var(dl_text_muted)"
+            "layer0.tint": "var(dl_text)"
         },
         {
             "class": "tab_close_button",
@@ -307,7 +320,7 @@
             "layer0.tint": "var(dl_accent)"
         },
         // =========================================================
-        // PALETA DE COMANDOS Y BÚSQUEDA (Quick Panel / Inputs)
+        // PALETA DE COMANDOS Y BÚSQUEDA
         // =========================================================
         {
             "class": "overlay_control",
@@ -351,7 +364,7 @@
             "layer1.inner_margin": 1
         },
         // =========================================================
-        // BARRAS DE DESPLAZAMIENTO (Scrollbars)
+        // BARRAS DE DESPLAZAMIENTO (Turquesa con transparencia)
         // =========================================================
         {
             "class": "scroll_bar_control",
@@ -362,7 +375,8 @@
         {
             "class": "puck_control",
             "layer0.texture": "",
-            "layer0.tint": "var(dl_border)",
+            // Color de acento (Turquesa) al 50% de opacidad
+            "layer0.tint": "var(dl_accent)",
             "layer0.opacity": 0.5
         },
         {
@@ -377,11 +391,10 @@
             "attributes": [
                 "pressed"
             ],
-            "layer0.tint": "var(dl_text_muted)",
             "layer0.opacity": 1.0
         },
         // =========================================================
-        // BARRA DE ESTADO (Status Bar)
+        // BARRA DE ESTADO
         // =========================================================
         {
             "class": "status_bar",
