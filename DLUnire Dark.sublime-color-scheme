@@ -88,7 +88,7 @@
         },
         {
             "name": "Properties",
-            "scope": "variable.other.property, variable.other.member, support.type.property-name, meta.property-name, entity.name.variable",
+            "scope": "variable.other.property, variable.other.member, support.type.property-name, meta.property-name, entity.name.variable, meta.mapping.key, entity.name.tag.yaml",
             "foreground": "var(orange-soft)"
         },
         {
