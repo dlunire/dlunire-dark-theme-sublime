@@ -1,16 +1,36 @@
 {
-    "extends": "Default.sublime-theme",
+    "extends": "Adaptive.sublime-theme",
     "rules": [
         {
             "class": "sidebar_container",
-            "layer0.tint": "#030508"
+            "layer0.tint": "#030508",
+            "layer0.opacity": 1.0
         },
         {
             "class": "sidebar_tree",
-            "row_padding": [
-                8,
-                4
-            ]
+            "row_padding": [12, 6],
+            "indent_offset": 12,
+            "indent": 14
+        },
+        {
+            "class": "tree_row",
+            "layer0.tint": [0, 0, 0, 0],
+            "layer0.opacity": 1.0
+        },
+        {
+            "class": "tree_row",
+            "attributes": ["hover"],
+            "layer0.tint": "#0A1017"
+        },
+        {
+            "class": "tree_row",
+            "attributes": ["selected"],
+            "layer0.tint": "#0D1B2A"
+        },
+        {
+            "class": "sidebar_heading",
+            "color": "#FFFFFF",
+            "font.bold": true
         },
         {
             "class": "sidebar_label",
@@ -18,27 +38,61 @@
         },
         {
             "class": "sidebar_label",
-            "parents": [
-                {
-                    "class": "tree_row",
-                    "attributes": [
-                        "selected"
-                    ]
-                }
-            ],
+            "parents": [{"class": "tree_row", "attributes": ["hover"]}],
             "color": "#FFFFFF"
         },
         {
-            "class": "tree_row",
-            "attributes": [
-                "selected"
-            ],
-            "layer0.tint": "#0D1B2A"
+            "class": "sidebar_label",
+            "parents": [{"class": "tree_row", "attributes": ["selected"]}],
+            "color": "#00E8FF"
         },
         {
-            "class": "sidebar_heading",
-            "color": "#FFFFFF",
-            "font.bold": true
+            "class": "icon_folder",
+            "layer0.tint": "#656565"
+        },
+        {
+            "class": "icon_folder",
+            "parents": [{"class": "tree_row", "attributes": ["hover"]}],
+            "layer0.tint": "#A1A1A1"
+        },
+        {
+            "class": "icon_folder",
+            "parents": [{"class": "tree_row", "attributes": ["expanded"]}],
+            "layer0.tint": "#00E8FF"
+        },
+        {
+            "class": "icon_folder",
+            "parents": [{"class": "tree_row", "attributes": ["selected"]}],
+            "layer0.tint": "#00E8FF"
+        },
+        {
+            "class": "disclosure_button_control",
+            "layer0.tint": "#656565"
+        },
+        {
+            "class": "disclosure_button_control",
+            "parents": [{"class": "tree_row", "attributes": ["hover"]}],
+            "layer0.tint": "#A1A1A1"
+        },
+        {
+            "class": "disclosure_button_control",
+            "parents": [{"class": "tree_row", "attributes": ["selected"]}],
+            "layer0.tint": "#00E8FF"
+        },
+        {
+            "class": "icon_file_type",
+            "layer0.opacity": 1.0,
+            "layer0.tint": "#A1A1A1"
+        },
+        {
+            "class": "icon_file_type",
+            "parents": [{"class": "tree_row", "attributes": ["hover"]}],
+            "layer0.tint": "#FFFFFF"
+        },
+        {
+            "class": "icon_file_type",
+            "parents": [{"class": "tree_row", "attributes": ["selected"]}],
+            "layer0.tint": ""
         },
         {
             "class": "tabset",
@@ -48,16 +102,11 @@
             "class": "tab_control",
             "layer0.tint": "#05080C",
             "layer0.opacity": 1.0,
-            "content_margin": [
-                16,
-                8
-            ]
+            "content_margin": [16, 8]
         },
         {
             "class": "tab_control",
-            "attributes": [
-                "selected"
-            ],
+            "attributes": ["selected"],
             "layer0.tint": "#0A1017"
         },
         {
@@ -66,14 +115,7 @@
         },
         {
             "class": "tab_label",
-            "parents": [
-                {
-                    "class": "tab_control",
-                    "attributes": [
-                        "selected"
-                    ]
-                }
-            ],
+            "parents": [{"class": "tab_control", "attributes": ["selected"]}],
             "color": "#00e1ff"
         },
         {
@@ -82,11 +124,7 @@
         },
         {
             "class": "label_control",
-            "parents": [
-                {
-                    "class": "status_bar"
-                }
-            ],
+            "parents": [{"class": "status_bar"}],
             "color": "#A1A1A1"
         },
         {
