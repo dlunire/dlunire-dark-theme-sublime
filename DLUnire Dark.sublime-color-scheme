@@ -1,0 +1,169 @@
+{
+    "name": "DLUnire Dark",
+    "author": "dlunire",
+    "variables": {
+        "bg": "#010305",
+        "bg-alt": "#05080C",
+        "bg-alt2": "#030508",
+        "bg-input": "#080D14",
+        "fg": "#FFFFFF",
+        "fg-muted": "#A1A1A1",
+        "fg-dim": "#656565",
+        "border": "#2A3846",
+        "line-highlight": "#0A1017",
+        "selection": "#10324C",
+        "list-selection": "#0D1B2A",
+        "cyan": "#00E8FF",
+        "cyan-soft": "#A0E5FF",
+        "cyan-strong": "#00D0FF",
+        "green": "#00FF00",
+        "orange": "#FF6D00",
+        "orange-soft": "#FF9100",
+        "yellow": "#FFC600",
+        "peach": "#FAA859",
+        "purple": "#A0A0FF",
+        "pink": "#F50057",
+        "teal": "#1DE9B6"
+    },
+    "globals": {
+        "background": "var(bg)",
+        "foreground": "var(fg)",
+        "caret": "var(cyan)",
+        "block_caret": "var(cyan)",
+        "line_highlight": "var(line-highlight)",
+        "selection": "var(selection)",
+        "selection_foreground": "var(fg)",
+        "selection_border": "var(border)",
+        "inactive_selection": "var(bg-alt)",
+        "gutter": "var(bg)",
+        "gutter_foreground": "var(border)",
+        "guide": "var(border)",
+        "active_guide": "var(cyan-soft)",
+        "find_highlight": "var(yellow)",
+        "find_highlight_foreground": "var(bg)",
+        "brackets_options": "underline",
+        "brackets_foreground": "var(cyan)",
+        "bracket_contents_options": "underline",
+        "bracket_contents_foreground": "var(cyan-soft)",
+        "tags_options": "stippled_underline",
+        "shadow": "#00000055",
+        "misspelling": "var(pink)"
+    },
+    "rules": [
+        {
+            "name": "Comments",
+            "scope": "comment, comment.block, comment.line, comment.block.documentation",
+            "foreground": "var(fg-dim)",
+            "font_style": "normal"
+        },
+        {
+            "name": "Keywords",
+            "scope": "keyword, keyword.control, keyword.operator.word, storage.modifier, storage.type, storage",
+            "foreground": "var(orange)"
+        },
+        {
+            "name": "Primitive types",
+            "scope": "support.type, support.type.primitive, keyword.type, storage.type.primitive",
+            "foreground": "var(yellow)"
+        },
+        {
+            "name": "Strings",
+            "scope": "string, string.quoted, string.template, string.regexp",
+            "foreground": "var(fg)"
+        },
+        {
+            "name": "Numbers",
+            "scope": "constant.numeric",
+            "foreground": "var(peach)"
+        },
+        {
+            "name": "Constants",
+            "scope": "constant, constant.language, constant.character.escape",
+            "foreground": "var(purple)"
+        },
+        {
+            "name": "Variables",
+            "scope": "variable, variable.parameter, variable.other, variable.language, variable.object",
+            "foreground": "var(cyan)"
+        },
+        {
+            "name": "Properties",
+            "scope": "variable.other.property, variable.other.member, support.type.property-name, meta.property-name, entity.name.variable",
+            "foreground": "var(orange-soft)"
+        },
+        {
+            "name": "Functions",
+            "scope": "entity.name.function, support.function, meta.function-call, variable.function, entity.name.method",
+            "foreground": "var(cyan-soft)"
+        },
+        {
+            "name": "Classes",
+            "scope": "entity.name.type, entity.name.class, entity.name.namespace, support.class, support.type.class, entity.name.struct, entity.name.interface, entity.name.enum, entity.name.trait",
+            "foreground": "var(green)"
+        },
+        {
+            "name": "Attributes / Decorators",
+            "scope": "entity.other.attribute-name, meta.annotation, storage.type.annotation",
+            "foreground": "var(pink)"
+        },
+        {
+            "name": "HTML/XML Tags",
+            "scope": "entity.name.tag",
+            "foreground": "var(teal)"
+        },
+        {
+            "name": "HTML/XML Attributes",
+            "scope": "entity.other.attribute-name.html, entity.other.attribute-name.xml",
+            "foreground": "var(pink)"
+        },
+        {
+            "name": "Markdown Headings",
+            "scope": "markup.heading, markup.heading.markdown",
+            "foreground": "var(cyan-strong)"
+        },
+        {
+            "name": "Markdown Bold",
+            "scope": "markup.bold",
+            "foreground": "var(yellow)",
+            "font_style": "bold"
+        },
+        {
+            "name": "Markdown Italic",
+            "scope": "markup.italic",
+            "foreground": "var(cyan)",
+            "font_style": "italic"
+        },
+        {
+            "name": "Markdown Links",
+            "scope": "markup.underline.link, string.other.link",
+            "foreground": "var(cyan-strong)",
+            "font_style": "underline"
+        },
+        {
+            "name": "Markdown Lists",
+            "scope": "markup.list",
+            "foreground": "var(orange)"
+        },
+        {
+            "name": "Markdown Quotes",
+            "scope": "markup.quote",
+            "foreground": "var(fg-dim)"
+        },
+        {
+            "name": "Invalid",
+            "scope": "invalid, invalid.illegal",
+            "foreground": "var(fg)",
+            "background": "var(pink)"
+        },
+        {
+            "name": "Diff Inserted",
+            "scope": "markup.inserted",
+            "foreground": "var(green)"
+        },
+        {
+            "name": "Diff Deleted",
+            "scope": "markup.deleted",
+            "foreground": "var(pink)"
+        }
+    ]
+}
