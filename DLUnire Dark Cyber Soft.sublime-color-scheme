@@ -9,13 +9,13 @@
         "fg": "#FFFFFF",
         "fg-muted": "#c8f9ff",
         "fg-dim": "#656565",
-        "border": "#2A3846",
-        "line-highlight": "#0A1017",
-        "selection": "#0D1B2A",
-        "cyan": "#00FFCC",
+        "border": "#00D0FF",
+        "guide-color": "#0080d490",
+        "line-highlight": "#0f1418",
+        "selection": "#0f2030",
+        "cyan": "#00D0FF",
         "cyan-soft": "#8AFDFF",
         "cyan-strong": "#00D0FF",
-        "green": "#00FFAA",
         "orange": "#FF6D00",
         "orange-soft": "#FF9100",
         "yellow": "#FFC600",
@@ -35,9 +35,9 @@
         "selection_border": "var(border)",
         "inactive_selection": "var(bg-alt)",
         "gutter": "var(bg)",
-        "gutter_foreground": "var(border)",
-        "guide": "var(border)",
-        "active_guide": "var(cyan-soft)",
+        "gutter_foreground": "#c8f9ff",
+        "guide": "var(guide-color)",
+        "active_guide": "var(cyan)",
         "find_highlight": "var(yellow)",
         "find_highlight_foreground": "var(bg)",
         "brackets_options": "underline",
@@ -46,7 +46,11 @@
         "bracket_contents_foreground": "var(cyan-soft)",
         "tags_options": "stippled_underline",
         "shadow": "#00000055",
-        "misspelling": "var(pink)"
+        "misspelling": "var(pink)",
+        "vcs_added": "var(cyan)",
+        "vcs_modified": "var(cyan)",
+        "vcs_deleted": "var(pink)",
+        "vcs_untracked": "var(cyan-soft)"
     },
     "rules": [
         {
@@ -66,7 +70,7 @@
             "foreground": "var(teal)"
         },
         {
-            "name": "Strings (White for high readability)",
+            "name": "Strings",
             "scope": "string, string.quoted, string.template, string.regexp",
             "foreground": "var(fg)"
         },
@@ -98,27 +102,7 @@
         {
             "name": "Classes",
             "scope": "entity.name.type, entity.name.class, entity.name.namespace, support.class, support.type.class, entity.name.struct, entity.name.interface, entity.name.enum, entity.name.trait",
-            "foreground": "var(green)"
-        },
-        {
-            "name": "Interfaces",
-            "scope": "entity.name.interface, support.interface",
-            "foreground": "#B983FF"
-        },
-        {
-            "name": "Structs",
-            "scope": "entity.name.struct, support.struct",
-            "foreground": "#FFD580"
-        },
-        {
-            "name": "Enums",
-            "scope": "entity.name.enum, support.enum, constant.other.enum",
-            "foreground": "#33EEFF"
-        },
-        {
-            "name": "Operators & Punctuation",
-            "scope": "keyword.operator, punctuation.separator, punctuation.terminator, punctuation.accessor",
-            "foreground": "#5C7A88"
+            "foreground": "var(cyan-soft)"
         },
         {
             "name": "Attributes / Decorators",
@@ -177,7 +161,12 @@
         {
             "name": "Diff Inserted",
             "scope": "markup.inserted",
-            "foreground": "var(green)"
+            "foreground": "var(cyan)"
+        },
+        {
+            "name": "Diff Changed",
+            "scope": "markup.changed",
+            "foreground": "var(cyan)"
         },
         {
             "name": "Diff Deleted",
