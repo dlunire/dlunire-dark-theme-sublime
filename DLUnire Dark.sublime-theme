@@ -1,5 +1,5 @@
 {
-    "extends": "Adaptive.sublime-theme",
+    "extends": "Default.sublime-theme",
     "variables": {
         "dl_background": "#010305",
         "dl_panel": "#05080C",
@@ -21,27 +21,69 @@
         "dl_accent_soft": "#00bbff",
         "dl_orange": "#FF6D00",
         "dl_orange_soft": "#FF9100",
-        "dl_input": "#080D14"
+        "dl_input": "#080D14",
+        "dl_button_bg": "#0A1017",
+
+        // Variables base requeridas por Default.sublime-theme
+        "base_hue": "hsl(215, 10%, 50%)",
+        "base_tint": "white",
+        "ui_bg": "var(dl_panel)",
+        "text_fg": "var(dl_text)",
+        "sidebar_bg": "var(dl_sidebar)",
+        "sidebar_row_selected": "var(dl_active)",
+        "sidebar_heading": "var(dl_text_bright)",
+        "sidebar_label": "var(dl_text)",
+        "sidebar_label_selected": "var(dl_accent)",
+        "tabset_dark_bg": "var(dl_tabbar)",
+        "button_bg": "var(dl_button_bg)",
+        "scroll_bar_bg": "var(dl_sidebar)",
+        "scroll_bar_dark_bg": "var(dl_sidebar)",
+        "scroll_bar_puck_bg": "var(dl_accent)",
+        "scroll_bar_puck_dark_bg": "var(dl_accent)",
+        "sidebar_scroll_bar_bg": "var(dl_sidebar)",
+        "sidebar_scroll_bar_puck_bg": "var(dl_accent)",
+        "status_bar_bg": "var(dl_background)"
     },
     "rules": [
         // =========================================================
-        // VENTANA Y TÍTULO
+        // VENTANA, TÍTULO Y BARRA DE MENÚ SUPERIOR
         // =========================================================
         {
             "class": "title_bar",
+            "style": "dark",
             "bg": "var(dl_background)",
             "fg": "var(dl_text_bright)"
         },
+        {
+            "class": "menu_bar",
+            "layer0.texture": "",
+            "layer0.tint": "var(dl_background)",
+            "layer0.opacity": 1.0
+        },
+        {
+            "class": "menu_bar_item",
+            "color": "var(dl_text)"
+        },
+        {
+            "class": "menu_bar_item",
+            "attributes": ["hover"],
+            "color": "var(dl_text_bright)"
+        },
+        {
+            "class": "menu_bar_item",
+            "attributes": ["selected"],
+            "color": "var(dl_accent)"
+        },
 
         // =========================================================
-        // MENÚ CONTEXTUAL Y MENÚ PRINCIPAL (Estilo DLUnire)
+        // MENÚ CONTEXTUAL Y MENÚS DESPLEGABLES (Estilo DLUnire)
         // =========================================================
         {
             "class": "menu",
             "layer0.texture": "",
             "layer0.tint": "var(dl_panel)",
             "layer0.opacity": 1.0,
-            "layer1.texture": "",
+            "layer1.texture": "Theme - Default/common/tab_square_pinstripe.png",
             "layer1.tint": "var(dl_border)",
             "layer1.opacity": 1.0,
             "layer1.draw_center": false,
@@ -58,6 +100,7 @@
         {
             "class": "menu_item",
             "attributes": ["selected"],
+            "layer0.texture": "",
             "layer0.tint": "var(dl_hover)",
             "layer0.opacity": 1.0
         },
@@ -139,14 +182,14 @@
         },
 
         // =========================================================
-        // BARRA LATERAL (Sidebar) CON BORDES Y SELECCIÓN DLUNIRE
+        // BARRA LATERAL (Sidebar) CON BORDE DERECHO
         // =========================================================
         {
             "class": "sidebar_container",
             "layer0.texture": "",
             "layer0.tint": "var(dl_sidebar)",
             "layer0.opacity": 1.0,
-            "layer1.texture": "",
+            "layer1.texture": "Theme - Default/common/tab_square_pinstripe.png",
             "layer1.tint": "var(dl_border_cyan)",
             "layer1.opacity": 1.0,
             "layer1.draw_center": false,
@@ -179,16 +222,17 @@
         {
             "class": "tree_row",
             "attributes": ["hover"],
+            "layer0.texture": "",
             "layer0.tint": "var(dl_hover)",
             "layer0.opacity": 1.0
         },
         {
             "class": "tree_row",
             "attributes": ["selected"],
+            "layer0.texture": "",
             "layer0.tint": "var(dl_active)",
             "layer0.opacity": 1.0,
-            // Indicador de borde izquierdo activo en cian DLUnire
-            "layer1.texture": "",
+            "layer1.texture": "Theme - Default/common/tab_square_highlight.png",
             "layer1.tint": "var(dl_accent)",
             "layer1.opacity": 1.0,
             "layer1.draw_center": false,
@@ -279,15 +323,15 @@
         },
 
         // =========================================================
-        // BARRA DE PESTAÑAS (Tabset Control & Borde Inferior Completo)
+        // BARRA DE PESTAÑAS (Tabset Control & Borde Inferior)
         // =========================================================
         {
             "class": "tabset_control",
             "layer0.texture": "",
             "layer0.tint": "var(dl_tabbar)",
             "layer0.opacity": 1.0,
-            // Borde inferior continuo que delimita toda la barra de pestañas
-            "layer1.texture": "",
+            // Borde inferior continuo que delimita la tira de pestañas
+            "layer1.texture": "Theme - Default/common/tab_square_pinstripe.png",
             "layer1.tint": "var(dl_border_cyan)",
             "layer1.opacity": 1.0,
             "layer1.draw_center": false,
@@ -296,13 +340,13 @@
             "tab_min_width": 60,
             "tab_height": 36
         },
-        // Pestaña Inactiva (Con borde separador lateral y borde inferior cerrado)
+        // Pestaña Inactiva
         {
             "class": "tab_control",
             "layer0.texture": "",
             "layer0.tint": "var(dl_tab_inactive)",
             "layer0.opacity": 1.0,
-            "layer1.texture": "",
+            "layer1.texture": "Theme - Default/common/tab_square_pinstripe.png",
             "layer1.tint": "var(dl_border_tab)",
             "layer1.opacity": 0.5,
             "layer1.draw_center": false,
@@ -315,13 +359,13 @@
             "attributes": ["hover"],
             "layer0.texture": "",
             "layer0.tint": "var(dl_hover)",
-            "layer1.texture": "",
+            "layer1.texture": "Theme - Default/common/tab_square_pinstripe.png",
             "layer1.tint": "var(dl_border_tab)",
             "layer1.opacity": 0.8,
             "layer1.draw_center": false,
             "layer1.inner_margin": [0, 0, 1, 1]
         },
-        // Pestaña Activa / Seleccionada (Borde superior acento, laterales cian, SIN borde inferior para fundirse con el editor)
+        // Pestaña Activa / Seleccionada
         {
             "class": "tab_control",
             "attributes": ["selected"],
@@ -329,13 +373,13 @@
             "layer0.tint": "var(dl_tab_active)",
             "layer0.opacity": 1.0,
             // Borde superior cian eléctrico
-            "layer1.texture": "",
+            "layer1.texture": "Theme - Default/common/tab_square_highlight.png",
             "layer1.tint": "var(dl_accent)",
             "layer1.opacity": 1.0,
             "layer1.draw_center": false,
             "layer1.inner_margin": [0, 2, 0, 0],
             // Bordes laterales
-            "layer2.texture": "",
+            "layer2.texture": "Theme - Default/common/tab_square_pinstripe.png",
             "layer2.tint": "var(dl_border_cyan)",
             "layer2.opacity": 1.0,
             "layer2.draw_center": false,
@@ -411,6 +455,93 @@
         },
 
         // =========================================================
+        // BOTONES GENERALES Y DEL BUSCADOR/REEMPLAZADOR (Find & Replace)
+        // =========================================================
+        {
+            "class": "button_control",
+            "layer0.texture": "Theme - Default/common/button.png",
+            "layer0.tint": "var(dl_button_bg)",
+            "layer0.opacity": 1.0,
+            "layer0.inner_margin": 4,
+            "layer1.texture": "Theme - Default/common/button.png",
+            "layer1.tint": "var(dl_border)",
+            "layer1.opacity": 1.0,
+            "layer1.draw_center": false,
+            "layer1.inner_margin": 1,
+            "min_size": [72, 22],
+            "content_margin": [10, 4]
+        },
+        {
+            "class": "button_control",
+            "attributes": ["hover"],
+            "layer0.tint": "var(dl_active)",
+            "layer1.tint": "var(dl_accent)"
+        },
+        {
+            "class": "button_control",
+            "attributes": ["pressed"],
+            "layer0.tint": "var(dl_active)",
+            "layer1.tint": "var(dl_accent)"
+        },
+        {
+            "class": "label_control",
+            "parents": [
+                {
+                    "class": "button_control"
+                }
+            ],
+            "color": "var(dl_text_bright)",
+            "font.bold": true
+        },
+        {
+            "class": "label_control",
+            "parents": [
+                {
+                    "class": "button_control",
+                    "attributes": ["hover"]
+                }
+            ],
+            "color": "var(dl_accent)"
+        },
+        {
+            "class": "label_control",
+            "parents": [
+                {
+                    "class": "button_control",
+                    "attributes": ["disabled"]
+                }
+            ],
+            "color": "var(dl_text_dim)"
+        },
+
+        // Botones de iconos (Regex, Case-sensitive, Whole word, etc.)
+        {
+            "class": "icon_button_control",
+            "layer0.texture": "Theme - Default/common/button.png",
+            "layer0.tint": "var(dl_button_bg)",
+            "layer0.opacity": 1.0,
+            "layer0.inner_margin": 2,
+            "layer1.texture": "Theme - Default/common/button.png",
+            "layer1.tint": "var(dl_border)",
+            "layer1.opacity": 1.0,
+            "layer1.draw_center": false,
+            "layer1.inner_margin": 1,
+            "content_margin": [6, 4]
+        },
+        {
+            "class": "icon_button_control",
+            "attributes": ["hover"],
+            "layer0.tint": "var(dl_hover)",
+            "layer1.tint": "var(dl_accent)"
+        },
+        {
+            "class": "icon_button_control",
+            "attributes": ["selected"],
+            "layer0.tint": "var(dl_active)",
+            "layer1.tint": "var(dl_accent)"
+        },
+
+        // =========================================================
         // PALETA DE COMANDOS Y POPUPS
         // =========================================================
         {
@@ -418,7 +549,7 @@
             "layer0.texture": "",
             "layer0.tint": "var(dl_panel)",
             "layer0.opacity": 1.0,
-            "layer1.texture": "",
+            "layer1.texture": "Theme - Default/common/tab_square_pinstripe.png",
             "layer1.tint": "var(dl_border_cyan)",
             "layer1.opacity": 1.0,
             "layer1.draw_center": false,
@@ -454,7 +585,7 @@
             "layer0.texture": "",
             "layer0.tint": "var(dl_input)",
             "layer0.opacity": 1.0,
-            "layer1.texture": "",
+            "layer1.texture": "Theme - Default/common/tab_square_pinstripe.png",
             "layer1.tint": "var(dl_border)",
             "layer1.opacity": 1.0,
             "layer1.draw_center": false,
@@ -462,35 +593,54 @@
         },
 
         // =========================================================
-        // BARRAS DE DESPLAZAMIENTO (Scrollbars)
+        // BARRAS DE DESPLAZAMIENTO (Scrollbars Estilo DLUnire)
         // =========================================================
         {
             "class": "scroll_bar_control",
             "layer0.texture": "",
             "layer0.tint": "var(dl_background)",
-            "layer0.opacity": 0.0
+            "layer0.opacity": 1.0,
+            "content_margin": 4
         },
         {
             "class": "scroll_track_control",
-            "layer0.texture": "",
+            "layer0.texture": "Theme - Default/common/scroll.png",
             "layer0.tint": "var(dl_sidebar)",
-            "layer0.opacity": 0.3
+            "layer0.opacity": 0.5,
+            "layer0.inner_margin": 2,
+            "content_margin": [4, 4, 3, 4]
+        },
+        {
+            "class": "scroll_track_control",
+            "attributes": ["horizontal"],
+            "layer0.texture": "Theme - Default/common/scroll_horiz.png",
+            "content_margin": [4, 4, 4, 3]
         },
         {
             "class": "puck_control",
-            "layer0.texture": "",
-            "layer0.tint": "var(dl_accent_soft)",
-            "layer0.opacity": 0.3
+            "layer0.texture": "Theme - Default/common/scroll.png",
+            "layer0.tint": "var(dl_accent)",
+            "layer0.opacity": 0.35,
+            "layer0.inner_margin": 2,
+            "content_margin": [0, 12]
+        },
+        {
+            "class": "puck_control",
+            "attributes": ["horizontal"],
+            "layer0.texture": "Theme - Default/common/scroll_horiz.png",
+            "content_margin": [12, 0]
         },
         {
             "class": "puck_control",
             "attributes": ["hover"],
-            "layer0.opacity": 0.6
+            "layer0.tint": "var(dl_accent)",
+            "layer0.opacity": 0.75
         },
         {
             "class": "puck_control",
             "attributes": ["pressed"],
-            "layer0.opacity": 0.9
+            "layer0.tint": "var(dl_accent)",
+            "layer0.opacity": 1.0
         },
 
         // =========================================================
@@ -501,7 +651,7 @@
             "layer0.texture": "",
             "layer0.tint": "var(dl_background)",
             "layer0.opacity": 1.0,
-            "layer1.texture": "",
+            "layer1.texture": "Theme - Default/common/tab_square_pinstripe.png",
             "layer1.tint": "var(dl_border_cyan)",
             "layer1.opacity": 1.0,
             "layer1.draw_center": false,
@@ -522,14 +672,14 @@
         },
 
         // =========================================================
-        // PANELES INFERIORES (Console / Output / Find Panel)
+        // PANELES INFERIORES (Console / Output / Find & Replace Panel)
         // =========================================================
         {
             "class": "panel_control",
             "layer0.texture": "",
             "layer0.tint": "var(dl_panel)",
             "layer0.opacity": 1.0,
-            "layer1.texture": "",
+            "layer1.texture": "Theme - Default/common/tab_square_pinstripe.png",
             "layer1.tint": "var(dl_border_cyan)",
             "layer1.opacity": 1.0,
             "layer1.draw_center": false,
