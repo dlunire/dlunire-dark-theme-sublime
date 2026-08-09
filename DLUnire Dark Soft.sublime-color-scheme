@@ -76,6 +76,16 @@
             "foreground": "var(fg)"
         },
         {
+            "name": "JSON / Object Keys",
+            "scope": "meta.mapping.key, meta.mapping.key string, meta.mapping.key.json, source.json meta.mapping.key string, support.type.property-name.json, entity.name.tag.json, meta.structure.dictionary.key string, source.yaml entity.name.tag, source.toml entity.name.tag",
+            "foreground": "var(green)"
+        },
+        {
+            "name": "JSON / Object Separators",
+            "scope": "punctuation.separator.key-value.json, punctuation.separator.mapping, punctuation.separator.key-value",
+            "foreground": "var(cyan-soft)"
+        },
+        {
             "name": "Numbers",
             "scope": "constant.numeric",
             "foreground": "var(peach)"

@@ -55,11 +55,40 @@
                 "children": [
                     {
                         "caption": "DLUnire Dark",
-                        "command": "set_setting",
-                        "args": {
-                            "setting": "theme",
-                            "value": "DLUnire Dark.sublime-theme"
-                        }
+                        "children": [
+                            {
+                                "caption": "DLUnire Dark",
+                                "command": "set_setting",
+                                "args": {
+                                    "setting": "theme",
+                                    "value": "DLUnire Dark.sublime-theme"
+                                }
+                            },
+                            {
+                                "caption": "DLUnire Dark Soft",
+                                "command": "set_setting",
+                                "args": {
+                                    "setting": "theme",
+                                    "value": "DLUnire Dark Soft.sublime-theme"
+                                }
+                            },
+                            {
+                                "caption": "DLUnire Dark Cyber",
+                                "command": "set_setting",
+                                "args": {
+                                    "setting": "theme",
+                                    "value": "DLUnire Dark Cyber.sublime-theme"
+                                }
+                            },
+                            {
+                                "caption": "DLUnire Dark Cyber Soft",
+                                "command": "set_setting",
+                                "args": {
+                                    "setting": "theme",
+                                    "value": "DLUnire Dark Cyber Soft.sublime-theme"
+                                }
+                            }
+                        ]
                     }
                 ]
             }
