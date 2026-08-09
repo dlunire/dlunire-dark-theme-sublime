@@ -10,7 +10,7 @@
         "dl_hover": "#081018",
         "dl_active": "#0D2035",
         "dl_border": "#00bbff30",
-        "dl_border_cyan": "#00e8ff4d",
+        "dl_border_cyan": "#00e8ff55",
         "dl_border_tab": "#00ffcc4d",
         "dl_accent": "#00FFCC",
         "dl_accent_soft": "#00E8FF",
@@ -54,11 +54,15 @@
             "class": "sidebar_container",
             "layer0.tint": "var(dl_sidebar)",
             "layer0.opacity": 1.0,
-            "border_size": 1,
-            "border_color": "var(dl_border_cyan)",
-            "border_sides": [
-                "right"
-            ]
+            "layer1.texture": "assets/separator-right.png",
+            "layer1.inner_margin": [
+                0,
+                0,
+                1,
+                0
+            ],
+            "layer1.tint": "var(dl_border_cyan)",
+            "layer1.opacity": 1.0
         },
         {
             "class": "sidebar_tree",
@@ -93,11 +97,15 @@
             ],
             "layer0.tint": "var(dl_active)",
             "layer0.opacity": 1.0,
-            "border_size": 2,
-            "border_color": "var(dl_accent)",
-            "border_sides": [
-                "left"
-            ]
+            "layer1.texture": "assets/separator-left-2px.png",
+            "layer1.inner_margin": [
+                2,
+                0,
+                0,
+                0
+            ],
+            "layer1.tint": "var(dl_accent)",
+            "layer1.opacity": 1.0
         },
         {
             "class": "sidebar_label",
@@ -128,25 +136,33 @@
             "class": "tabset_control",
             "layer0.tint": "var(dl_tabbar)",
             "layer0.opacity": 1.0,
-            "tab_height": 34,
-            "border_size": 1,
-            "border_color": "var(dl_border_cyan)",
-            "border_sides": [
-                "bottom"
-            ]
+            "layer1.texture": "assets/separator-bottom.png",
+            "layer1.inner_margin": [
+                0,
+                0,
+                0,
+                1
+            ],
+            "layer1.tint": "var(dl_border_cyan)",
+            "layer1.opacity": 1.0,
+            "tab_height": 34
         },
         {
             "class": "tab_control",
             "layer0.tint": "var(dl_tab_inactive)",
             "layer0.opacity": 1.0,
+            "layer1.texture": "assets/separator-right.png",
+            "layer1.inner_margin": [
+                0,
+                0,
+                1,
+                0
+            ],
+            "layer1.tint": "var(dl_border_tab)",
+            "layer1.opacity": 0.6,
             "content_margin": [
                 14,
                 4
-            ],
-            "border_size": 1,
-            "border_color": "var(dl_border_tab)",
-            "border_sides": [
-                "right"
             ]
         },
         {
@@ -164,11 +180,15 @@
             ],
             "layer0.tint": "var(dl_tab_active)",
             "layer0.opacity": 1.0,
-            "border_size": 2,
-            "border_color": "var(dl_accent)",
-            "border_sides": [
-                "top"
-            ]
+            "layer1.texture": "assets/separator-top.png",
+            "layer1.inner_margin": [
+                0,
+                2,
+                0,
+                0
+            ],
+            "layer1.tint": "var(dl_accent)",
+            "layer1.opacity": 1.0
         },
         {
             "class": "tab_label",
@@ -253,9 +273,7 @@
         {
             "class": "button_control",
             "layer0.tint": "var(dl_button_bg)",
-            "layer0.opacity": 1.0,
-            "border_size": 1,
-            "border_color": "var(dl_border)"
+            "layer0.opacity": 1.0
         },
         {
             "class": "button_control",
@@ -263,8 +281,7 @@
                 "hover"
             ],
             "layer0.tint": "var(dl_active)",
-            "layer0.opacity": 1.0,
-            "border_color": "var(dl_accent)"
+            "layer0.opacity": 1.0
         },
         {
             "class": "label_control",
@@ -302,9 +319,7 @@
                 "selected"
             ],
             "layer0.tint": "var(dl_active)",
-            "layer0.opacity": 1.0,
-            "border_size": 1,
-            "border_color": "var(dl_accent)"
+            "layer0.opacity": 1.0
         },
         {
             "class": "scroll_bar_control",
@@ -341,11 +356,15 @@
             "class": "status_bar",
             "layer0.tint": "var(dl_background)",
             "layer0.opacity": 1.0,
-            "border_size": 1,
-            "border_color": "var(dl_border_cyan)",
-            "border_sides": [
-                "top"
-            ]
+            "layer1.texture": "assets/separator-top.png",
+            "layer1.inner_margin": [
+                0,
+                1,
+                0,
+                0
+            ],
+            "layer1.tint": "var(dl_border_cyan)",
+            "layer1.opacity": 1.0
         },
         {
             "class": "label_control",
@@ -360,18 +379,20 @@
             "class": "panel_control",
             "layer0.tint": "var(dl_panel)",
             "layer0.opacity": 1.0,
-            "border_size": 1,
-            "border_color": "var(dl_border_cyan)",
-            "border_sides": [
-                "top"
-            ]
+            "layer1.texture": "assets/separator-top.png",
+            "layer1.inner_margin": [
+                0,
+                1,
+                0,
+                0
+            ],
+            "layer1.tint": "var(dl_border_cyan)",
+            "layer1.opacity": 1.0
         },
         {
             "class": "text_line_control",
             "layer0.tint": "var(dl_input)",
-            "layer0.opacity": 1.0,
-            "border_size": 1,
-            "border_color": "var(dl_border)"
+            "layer0.opacity": 1.0
         }
     ]
 }
