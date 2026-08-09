@@ -16,7 +16,7 @@ El paquete incluye **4 esquemas de color** con resaltado semántico consistente:
 |---|---|---|---|
 | **DLUnire Dark** | `#010305` | Clásico | Contraste puro ultra-oscuro con resaltado semántico estándar. |
 | **DLUnire Dark Soft** | `#07090b` | Clásico | Fondo grafito atenuado para reducir la fatiga visual en jornadas largas. |
-| **DLUnire Dark Cyber** | `#010305` | Cyberpunk Neón | Tokens diferenciados para interfaces (`#B983FF`), structs (`#FFD580`), enums (`#33EEFF`), tipos (`#1DE9B6`) y funciones (`#8afdff`). |
+| **DLUnire Dark Cyber** | `#010305` | Cyberpunk Neón | Tokens diferenciados para interfaces (`#B983FF`), structs (`#FFD580`), enums (`#33EEFF`), tipos (`#1DE9B6`), funciones (`#8AFDFF`) y clases heredadas (`#00F5FF`). |
 | **DLUnire Dark Cyber Soft** | `#04080C` | Cyberpunk Neón | Paleta Cyber adaptada a un fondo azul-pizarra suave y descansado. |
 
 ---
@@ -25,19 +25,21 @@ El paquete incluye **4 esquemas de color** con resaltado semántico consistente:
 
 Incluye **4 temas de interfaz (UI Themes)** para una apariencia visual completamente integrada:
 
-| Tema de Interfaz | Fondo UI | Pestaña Activa | Barra Lateral | Estilo |
-|---|---|---|---|---|
-| **`DLUnire Dark.sublime-theme`** | `#010305` | `#0A1017` (Texto `#00E8FF`) | `#030508` | Clásico OLED |
-| **`DLUnire Dark Soft.sublime-theme`** | `#07090b` | `#0f1418` (Texto `#00D0FF`) | `#070a0d` | Atenuado Grafito |
-| **`DLUnire Dark Cyber.sublime-theme`** | `#010305` | `#081018` (Texto `#00FFFF`) | `#030508` | Cyberpunk Neón |
-| **`DLUnire Dark Cyber Soft.sublime-theme`** | `#04080C` | `#0D151E` (Texto `#00FFFF`) | `#060A0F` | Cyberpunk Suave |
+| Tema de Interfaz | Fondo UI | Pestaña Activa | Barra Lateral | Barra de Estado | Estilo |
+|---|---|---|---|---|---|
+| **`DLUnire Dark.sublime-theme`** | `#010305` | `#0A1017` (Texto `#00E8FF`) | `#030508` | `#150030` | Clásico OLED |
+| **`DLUnire Dark Soft.sublime-theme`** | `#07090b` | `#0A1017` (Texto `#00b3ff`) | `#070a0d` | `#150030` | Atenuado Grafito |
+| **`DLUnire Dark Cyber.sublime-theme`** | `#010305` | `#0A1017` (Texto `#00E8FF`) | `#030508` | `#150030` | Cyberpunk Neón |
+| **`DLUnire Dark Cyber Soft.sublime-theme`** | `#04080C` | `#0D151E` (Texto `#00E8FF`) | `#060A0F` | `#150030` | Cyberpunk Suave |
 
-### Características de la Interfaz:
-- **Pestañas:** Pestañas no enfocadas con texto blanco puro (`#FFFFFF`) para máxima legibilidad; pestañas activas con texto cian brillante (`#00E8FF` / `#00FFFF`) en negrita y borde superior de acento.
-- **Bordes nítidos:** Borde inferior continuo en la barra de pestañas, borde divisor vertical derecho en el sidebar y bordes en paneles.
+### Características de la Interfaz y Sintaxis:
+- **Barra de Estado:** Fondo violeta profundo personalizado (`#150030`) con tipografía en cian suave (`#c8f9ff`) y decoraciones de Git.
+- **Botones y Paneles:** Botones estilizados con fondo azul petróleo (`#002030`), texto en blanco nítido (`#FFFFFF`) y hover activo (`#003040`).
+- **Guías de Indentación:** Guías de indentación activas e inactivas calibradas en cian (`#00b3ff`) para un seguimiento estructural limpio.
+- **Pestañas:** Pestañas no enfocadas con texto blanco puro (`#FFFFFF`) para máxima legibilidad; pestañas activas con texto cian brillante (`#00E8FF` / `#00b3ff`) en negrita y borde superior de acento.
+- **Bordes nítidos:** Borde inferior continuo en la barra de pestañas, borde divisor vertical en el sidebar y bordes sutiles en paneles (`#00bbff2d` / `#0099DD2D`).
 - **Menú Contextual:** Fondo `#05080C` con marco `#2A3846`, selección en `#0A1017` y atajos en cian.
-- **Barras de Desplazamiento:** Pista en `#030508` con puck redondeado en cian DLUnire (`#00E8FF`) con hover interactivo.
-- **Buscador y Reemplazador:** Botones estilizados con borde delimitador y retroalimentación activa en cian.
+- **Barras de Desplazamiento:** Pista en `#030508` con puck redondeado en cian DLUnire (`#00bbff80`) con hover interactivo.
 
 ---
 

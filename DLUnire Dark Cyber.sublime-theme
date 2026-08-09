@@ -8,22 +8,23 @@
         "fg": "#FFFFFF",
         "fg-muted": "#c8f9ff",
         "fg-dim": "#808080",
-        "border": "#00BFFF",
-        "border_subtle": "#00BFFF",
-        "line-highlight": "#081018",
-        "selection": "#0D2035",
-        "cyan": "#00D0FF",
+        "border": "#00bbff2d",
+        "border_subtle": "#00bbff2d",
+        "line-highlight": "#0A1017",
+        "selection": "#0D1B2A",
+        "cyan": "#00E8FF",
         "cyan-soft": "#8AFDFF",
-        "scrollbar_puck": "#00BFFF",
+        "scrollbar_puck": "#00bbff80",
         "orange": "#FF6D00",
         "orange-soft": "#FF9100",
         "pink": "#FF2A5F",
-        "minimap_color": "#0080d420",
-        "icon_color": "#00f0ffd0",
-        "button_color": "#0080d4",
+        "minimap_color": "#00eaff18",
+        "icon_color": "#00E8FF",
+        "button_color": "#ffffff",
         "button": "#002030",
         "button_hover": "#003040",
-        "button_active": "#002030"
+        "button_active": "#002030",
+        "status_bar": "#150030"
     },
     "rules": [
         {
@@ -327,7 +328,7 @@
         },
         {
             "class": "status_bar",
-            "layer0.tint": "#001020",
+            "layer0.tint": "var(status_bar)",
             "layer0.opacity": 1.0,
             "content_margin": [
                 8,

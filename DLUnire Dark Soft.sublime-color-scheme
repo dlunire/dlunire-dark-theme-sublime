@@ -3,16 +3,18 @@
     "author": "dlunire",
     "variables": {
         "bg": "#07090b",
-        "bg-alt": "#0a0d10",
+        "bg-alt": "#05080C",
         "bg-alt2": "#070a0d",
-        "bg-input": "#0c1015",
+        "bg-input": "#080D14",
         "fg": "#FFFFFF",
         "fg-muted": "#c8f9ff",
         "fg-dim": "#656565",
-        "border": "#00b3ff",
-        "guide-color": "#0080d490",
-        "line-highlight": "#0f1418",
-        "selection": "#0f2030",
+        "border": "#00bbff2d",
+        "guide-color": "#00b3ff",
+        "line-highlight": "#0A1017",
+        "selection": "#0091ff33",
+        "selection-border": "#00b3ff",
+        "inactive-selection": "#0A1017",
         "cyan": "#00b3ff",
         "cyan-soft": "#A0E5FF",
         "cyan-strong": "#00D0FF",
@@ -22,7 +24,13 @@
         "peach": "#FAA859",
         "purple": "#A0A0FF",
         "pink": "#F50057",
-        "teal": "#1DE9B6"
+        "teal": "#1DE9B6",
+        "green": "#00FF00",
+        "vcs-added": "#00FFAA",
+        "vcs-modified": "#00E8FF",
+        "vcs-deleted": "#F50057",
+        "vcs-untracked": "#00E8FF",
+        "minimap-shadow": "#0080d420"
     },
     "globals": {
         "background": "var(bg)",
@@ -32,10 +40,10 @@
         "line_highlight": "var(line-highlight)",
         "selection": "var(selection)",
         "selection_foreground": "var(fg)",
-        "selection_border": "var(border)",
-        "inactive_selection": "var(bg-alt)",
+        "selection_border": "var(selection-border)",
+        "inactive_selection": "var(inactive-selection)",
         "gutter": "var(bg)",
-        "gutter_foreground": "#c8f9ff",
+        "gutter_foreground": "var(fg-muted)",
         "guide": "var(guide-color)",
         "active_guide": "var(cyan)",
         "find_highlight": "var(yellow)",
@@ -45,12 +53,12 @@
         "bracket_contents_options": "underline",
         "bracket_contents_foreground": "var(cyan-soft)",
         "tags_options": "stippled_underline",
-        "shadow": "#00000055",
+        "shadow": "#0080d420",
         "misspelling": "var(pink)",
-        "vcs_added": "var(cyan)",
-        "vcs_modified": "var(cyan)",
-        "vcs_deleted": "var(pink)",
-        "vcs_untracked": "var(cyan-soft)"
+        "vcs_added": "var(vcs-added)",
+        "vcs_modified": "var(vcs-modified)",
+        "vcs_deleted": "var(vcs-deleted)",
+        "vcs_untracked": "var(vcs-untracked)"
     },
     "rules": [
         {
@@ -66,7 +74,7 @@
         },
         {
             "name": "Primitive types",
-            "scope": "support.type, support.type.primitive, keyword.type, storage.type.primitive",
+            "scope": "support.type, support.type.primitive, keyword.type, storage.type.primitive, entity.name.type.primitive",
             "foreground": "var(yellow)"
         },
         {
@@ -76,7 +84,7 @@
         },
         {
             "name": "Properties & JSON Keys",
-            "scope": "meta.mapping.key.json string.quoted.double.json, meta.mapping.key string, meta.mapping.key, variable.other.property, variable.other.member, support.type.property-name, meta.property-name, entity.name.tag.json, entity.name.tag.yaml",
+            "scope": "meta.mapping.key.json string.quoted.double.json, meta.mapping.key string, meta.mapping.key, variable.other.property, variable.other.member, support.type.property-name, meta.property-name, entity.name.tag.json, entity.name.tag.yaml, entity.name.variable.property",
             "foreground": "var(orange-soft)"
         },
         {
@@ -86,7 +94,7 @@
         },
         {
             "name": "Constants",
-            "scope": "constant, constant.language, constant.character.escape",
+            "scope": "constant, constant.language, constant.character.escape, constant.other",
             "foreground": "var(purple)"
         },
         {
@@ -102,7 +110,7 @@
         {
             "name": "Classes",
             "scope": "entity.name.type, entity.name.class, entity.name.namespace, support.class, support.type.class, entity.name.struct, entity.name.interface, entity.name.enum, entity.name.trait",
-            "foreground": "var(cyan-soft)"
+            "foreground": "var(green)"
         },
         {
             "name": "Attributes / Decorators",
@@ -161,7 +169,7 @@
         {
             "name": "Diff Inserted",
             "scope": "markup.inserted",
-            "foreground": "var(cyan)"
+            "foreground": "var(vcs-added)"
         },
         {
             "name": "Diff Changed",
@@ -171,7 +179,7 @@
         {
             "name": "Diff Deleted",
             "scope": "markup.deleted",
-            "foreground": "var(pink)"
+            "foreground": "var(vcs-deleted)"
         }
     ]
 }
