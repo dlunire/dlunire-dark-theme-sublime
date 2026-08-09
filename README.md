@@ -16,7 +16,7 @@ El paquete incluye **4 esquemas de color** con resaltado semántico consistente:
 |---|---|---|---|
 | **DLUnire Dark** | `#010305` | Clásico | Contraste puro ultra-oscuro con resaltado semántico estándar. |
 | **DLUnire Dark Soft** | `#07090b` | Clásico | Fondo grafito atenuado para reducir la fatiga visual en jornadas largas. |
-| **DLUnire Dark Cyber** | `#010305` | Cyberpunk Neón | Tokens diferenciados para interfaces (`#B983FF`), structs (`#FFD580`), enums (`#33EEFF`), tipos (`#1DE9B6`), funciones (`#8AFDFF`) y clases heredadas (`#00F5FF`). |
+| **DLUnire Dark Cyber** | `#010305` | Cyberpunk Neón | Tokens diferenciados para clases (`#00FFAA`), interfaces (`#B983FF`), structs (`#FFD580`), enums (`#33EEFF`), tipos (`#1DE9B6`), funciones (`#8AFDFF`) y clases heredadas (`#00F5FF`). |
 | **DLUnire Dark Cyber Soft** | `#04080C` | Cyberpunk Neón | Paleta Cyber adaptada a un fondo azul-pizarra suave y descansado. |
 
 ---
@@ -43,7 +43,38 @@ Incluye **4 temas de interfaz (UI Themes)** para una apariencia visual completam
 
 ---
 
-## 📦 Instalación
+## 🎯 3. Paleta de Colores
+
+| Elemento | Color | Propósito |
+|---|:---:|---|
+| **Fondo Ultra-Oscuro** | `#010305` | Fondo de editor OLED / Cyber |
+| **Fondo Soft (Grafito)** | `#07090b` | Fondo atenuado para jornadas nocturnas |
+| **Fondo Cyber Soft** | `#04080C` | Fondo azul-pizarra equilibrado |
+| **Texto por defecto** | `#FFFFFF` | Cadenas de texto y primer plano del editor |
+| **Palabras clave** | `#FF6D00` | Control de flujo, modificadores y storage |
+| **Clases definidas** | `#00FFAA` | Definiciones de clases y traits (Cyber) / `#00FF00` (Clásico) |
+| **Clases heredadas** | `#00F5FF` | Clases extendidas y tipos heredados (Cyber) |
+| **Interfaces** | `#B983FF` | Interfaces y contratos de tipos (Cyber) |
+| **Structs** | `#FFD580` | Estructuras de datos (Cyber) |
+| **Enums** | `#33EEFF` | Enumeraciones (Cyber) |
+| **Namespaces** | `#00E5D8` | Declaraciones de espacios de nombres (Cyber) |
+| **Funciones y Métodos** | `#8AFDFF` | Declaraciones y llamadas a funciones (Cyber) / `#A0E5FF` (Clásico) |
+| **Variables** | `#00E8FF` | Variables y objetos |
+| **Parámetros** | `#70F3FF` | Parámetros de función (Cyber) |
+| **Propiedades** | `#FF9100` | Propiedades de objetos y claves JSON/YAML |
+| **Atributos / Decoradores**| `#F50057` | Atributos y anotaciones del lenguaje |
+| **Tipos primitivos** | `#1DE9B6` | Tipos nativos (Cyber) / `#FFC600` (Clásico) |
+| **Etiquetas HTML/XML** | `#1DE9B6` | Elementos y tags HTML/XML |
+| **Operadores** | `#5C7A88` | Operadores y flechas de función (Cyber) |
+| **Constantes / Booleans** | `#A0A0FF` | Constantes del lenguaje y miembros enum |
+| **Números** | `#FAA859` | Literales numéricos |
+| **Comentarios** | `#656565` | Comentarios sin cursiva |
+| **Barra de Estado** | `#150030` | Fondo personalizado de barra de estado |
+| **Guías de Indentación** | `#00b3ff` | Guías de indentación estructurales |
+
+---
+
+## 📦 4. Instalación
 
 ### Método 1: A través de Package Control (Recomendado)
 
@@ -72,7 +103,7 @@ git clone https://github.com/dlunire/dlunire-dark-sublime.git "%APPDATA%\Sublime
 
 ---
 
-## ⚙️ Activación y Configuración
+## ⚙️ 5. Activación y Configuración
 
 Abre tus preferencias de usuario en Sublime Text (**Preferences > Settings**) y añade:
 
@@ -96,7 +127,7 @@ Puedes alternar entre cualquiera de los 4 temas y 4 esquemas de color desde el m
 
 ---
 
-## 🌐 Otros editores
+## 🌐 6. Otros editores
 
 DLUnire Dark también está disponible para:
 - **Visual Studio Code / VSCodium / Cursor:** [VS Code Marketplace](https://marketplace.visualstudio.com/) y [Open VSX](https://open-vsx.org/) como `dlunire.dlunire-dark`.
@@ -104,7 +135,7 @@ DLUnire Dark también está disponible para:
 
 ---
 
-## 🚀 Sobre DLUnire
+## 🚀 7. Sobre DLUnire
 
 DLUnire es un ecosistema PHP modular y orientado a APIs para crear aplicaciones web modernas y de alto rendimiento. Más información en [dlunire.dev](https://dlunire.dev).
 

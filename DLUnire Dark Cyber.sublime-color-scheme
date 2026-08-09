@@ -130,7 +130,7 @@
         {
             "name": "Classes & Traits",
             "scope": "entity.name.type.class, entity.name.class, support.class, support.type.class, entity.name.trait",
-            "foreground": "var(green)"
+            "foreground": "var(mint)"
         },
         {
             "name": "Interfaces",
