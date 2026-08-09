@@ -13,6 +13,7 @@
         "selection": "#0D2035",
         "cyan": "#00FFCC",
         "cyan-soft": "#8AFDFF",
+        "scrollbar_puck": "#00E8FF",
         "orange": "#FF6D00",
         "orange-soft": "#FF9100",
         "pink": "#FF2A5F"
@@ -91,7 +92,7 @@
         {
             "class": "grid_layout_control",
             "border_size": 1,
-            "border_color": "var(border)",
+            "border_color": "var(border)"
         },
         {
             "class": "tabset_control",
@@ -224,23 +225,23 @@
         },
         {
             "class": "puck_control",
-            "layer0.tint": "var(cyan)",
-            "layer0.opacity": 0.35
+            "layer0.tint": "var(scrollbar_puck)",
+            "layer0.opacity": 0.4
         },
         {
             "class": "puck_control",
             "attributes": [
                 "hover"
             ],
-            "layer0.tint": "var(cyan)",
-            "layer0.opacity": 0.75
+            "layer0.tint": "var(scrollbar_puck)",
+            "layer0.opacity": 0.8
         },
         {
             "class": "puck_control",
             "attributes": [
                 "pressed"
             ],
-            "layer0.tint": "var(cyan)",
+            "layer0.tint": "var(scrollbar_puck)",
             "layer0.opacity": 1.0
         },
         {

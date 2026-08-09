@@ -13,6 +13,7 @@
         "selection": "#0D1B2A",
         "cyan": "#00E8FF",
         "cyan-soft": "#A0E5FF",
+        "scrollbar_puck": "#00E8FF",
         "orange": "#FF6D00",
         "orange-soft": "#FF9100",
         "pink": "#F50057"
@@ -224,23 +225,23 @@
         },
         {
             "class": "puck_control",
-            "layer0.tint": "var(cyan)",
-            "layer0.opacity": 0.35
+            "layer0.tint": "var(scrollbar_puck)",
+            "layer0.opacity": 0.4
         },
         {
             "class": "puck_control",
             "attributes": [
                 "hover"
             ],
-            "layer0.tint": "var(cyan)",
-            "layer0.opacity": 0.75
+            "layer0.tint": "var(scrollbar_puck)",
+            "layer0.opacity": 0.8
         },
         {
             "class": "puck_control",
             "attributes": [
                 "pressed"
             ],
-            "layer0.tint": "var(cyan)",
+            "layer0.tint": "var(scrollbar_puck)",
             "layer0.opacity": 1.0
         },
         {
