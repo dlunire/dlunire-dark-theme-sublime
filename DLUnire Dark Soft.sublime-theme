@@ -8,7 +8,7 @@
         "fg": "#FFFFFF",
         "fg-muted": "#c8f9ff",
         "fg-dim": "#656565",
-        "border": "#2A3846",
+        "border": "#00bbff30",
         "line-highlight": "#0f1418",
         "selection": "#0f2030",
         "cyan": "#00b3ff",
@@ -89,15 +89,33 @@
             "font.bold": true
         },
         {
+            "class": "grid_layout_control",
+            "border_size": 1,
+            "border_color": "var(border)"
+        },
+        {
             "class": "tabset_control",
             "layer0.tint": "var(bg-alt)",
             "layer0.opacity": 1.0,
+            "layer1.texture": "Theme - Default/common/footer_divider.png",
+            "layer1.inner_margin": [
+                0,
+                0,
+                0,
+                1
+            ],
+            "layer1.draw_center": false,
+            "layer1.tint": "var(border)",
+            "layer1.opacity": 0.8,
             "tab_height": 34
         },
         {
             "class": "tab_control",
             "layer0.tint": "var(bg-alt)",
             "layer0.opacity": 1.0,
+            "layer3.texture": "Theme - Default/common/tab_square_divider_right.png",
+            "layer3.tint": "var(border)",
+            "layer3.opacity": 0.5,
             "content_margin": [
                 14,
                 4
@@ -228,7 +246,23 @@
         {
             "class": "status_bar",
             "layer0.tint": "var(bg)",
-            "layer0.opacity": 1.0
+            "layer0.opacity": 1.0,
+            "layer1.texture": "Theme - Default/common/footer_divider.png",
+            "layer1.inner_margin": [
+                0,
+                1,
+                0,
+                1
+            ],
+            "layer1.draw_center": false,
+            "layer1.tint": "var(border)",
+            "layer1.opacity": 0.8,
+            "content_margin": [
+                8,
+                1,
+                8,
+                0
+            ]
         },
         {
             "class": "label_control",
@@ -242,7 +276,23 @@
         {
             "class": "panel_control",
             "layer0.tint": "var(bg-alt)",
-            "layer0.opacity": 1.0
+            "layer0.opacity": 1.0,
+            "layer1.texture": "Theme - Default/common/footer_divider.png",
+            "layer1.inner_margin": [
+                0,
+                1,
+                0,
+                1
+            ],
+            "layer1.draw_center": false,
+            "layer1.tint": "var(border)",
+            "layer1.opacity": 0.8,
+            "content_margin": [
+                2,
+                3,
+                2,
+                2
+            ]
         },
         {
             "class": "text_line_control",
