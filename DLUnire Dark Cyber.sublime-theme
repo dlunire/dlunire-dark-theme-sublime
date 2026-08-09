@@ -10,6 +10,8 @@
         "dl_hover": "#081018",
         "dl_active": "#0D2035",
         "dl_border": "#00bbff30",
+        "dl_border_cyan": "#00e8ff4d",
+        "dl_border_tab": "#00ffcc4d",
         "dl_accent": "#00FFCC",
         "dl_accent_soft": "#00E8FF",
         "dl_tab_active_text": "#00FFFF",
@@ -51,7 +53,12 @@
         {
             "class": "sidebar_container",
             "layer0.tint": "var(dl_sidebar)",
-            "layer0.opacity": 1.0
+            "layer0.opacity": 1.0,
+            "border_size": 1,
+            "border_color": "var(dl_border_cyan)",
+            "border_sides": [
+                "right"
+            ]
         },
         {
             "class": "sidebar_tree",
@@ -85,7 +92,12 @@
                 "selected"
             ],
             "layer0.tint": "var(dl_active)",
-            "layer0.opacity": 1.0
+            "layer0.opacity": 1.0,
+            "border_size": 2,
+            "border_color": "var(dl_accent)",
+            "border_sides": [
+                "left"
+            ]
         },
         {
             "class": "sidebar_label",
@@ -116,7 +128,12 @@
             "class": "tabset_control",
             "layer0.tint": "var(dl_tabbar)",
             "layer0.opacity": 1.0,
-            "tab_height": 34
+            "tab_height": 34,
+            "border_size": 1,
+            "border_color": "var(dl_border_cyan)",
+            "border_sides": [
+                "bottom"
+            ]
         },
         {
             "class": "tab_control",
@@ -125,6 +142,11 @@
             "content_margin": [
                 14,
                 4
+            ],
+            "border_size": 1,
+            "border_color": "var(dl_border_tab)",
+            "border_sides": [
+                "right"
             ]
         },
         {
@@ -141,7 +163,12 @@
                 "selected"
             ],
             "layer0.tint": "var(dl_tab_active)",
-            "layer0.opacity": 1.0
+            "layer0.opacity": 1.0,
+            "border_size": 2,
+            "border_color": "var(dl_accent)",
+            "border_sides": [
+                "top"
+            ]
         },
         {
             "class": "tab_label",
@@ -219,9 +246,16 @@
             "layer0.opacity": 1.0
         },
         {
+            "class": "grid_layout_control",
+            "border_size": 1,
+            "border_color": "var(dl_border_cyan)"
+        },
+        {
             "class": "button_control",
             "layer0.tint": "var(dl_button_bg)",
-            "layer0.opacity": 1.0
+            "layer0.opacity": 1.0,
+            "border_size": 1,
+            "border_color": "var(dl_border)"
         },
         {
             "class": "button_control",
@@ -229,7 +263,8 @@
                 "hover"
             ],
             "layer0.tint": "var(dl_active)",
-            "layer0.opacity": 1.0
+            "layer0.opacity": 1.0,
+            "border_color": "var(dl_accent)"
         },
         {
             "class": "label_control",
@@ -267,7 +302,9 @@
                 "selected"
             ],
             "layer0.tint": "var(dl_active)",
-            "layer0.opacity": 1.0
+            "layer0.opacity": 1.0,
+            "border_size": 1,
+            "border_color": "var(dl_accent)"
         },
         {
             "class": "scroll_bar_control",
@@ -303,7 +340,12 @@
         {
             "class": "status_bar",
             "layer0.tint": "var(dl_background)",
-            "layer0.opacity": 1.0
+            "layer0.opacity": 1.0,
+            "border_size": 1,
+            "border_color": "var(dl_border_cyan)",
+            "border_sides": [
+                "top"
+            ]
         },
         {
             "class": "label_control",
@@ -317,12 +359,19 @@
         {
             "class": "panel_control",
             "layer0.tint": "var(dl_panel)",
-            "layer0.opacity": 1.0
+            "layer0.opacity": 1.0,
+            "border_size": 1,
+            "border_color": "var(dl_border_cyan)",
+            "border_sides": [
+                "top"
+            ]
         },
         {
             "class": "text_line_control",
             "layer0.tint": "var(dl_input)",
-            "layer0.opacity": 1.0
+            "layer0.opacity": 1.0,
+            "border_size": 1,
+            "border_color": "var(dl_border)"
         }
     ]
 }
