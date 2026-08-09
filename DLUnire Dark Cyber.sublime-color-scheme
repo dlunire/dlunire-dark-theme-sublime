@@ -71,9 +71,9 @@
             "foreground": "var(fg)"
         },
         {
-            "name": "JSON & Object Keys (Turquoise)",
+            "name": "Properties & JSON Keys",
             "scope": "meta.mapping.key.json string.quoted.double.json, meta.mapping.key string, meta.mapping.key, variable.other.property, variable.other.member, support.type.property-name, meta.property-name, entity.name.tag.json, entity.name.tag.yaml",
-            "foreground": "var(cyan)"
+            "foreground": "var(orange-soft)"
         },
         {
             "name": "Numbers",
