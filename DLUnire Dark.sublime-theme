@@ -12,9 +12,10 @@
         "dl_border": "#2A3846",
         "dl_border_cyan": "#00bbff2d",
         "dl_border_tab": "#00f2ff40",
+        "dl_separator": "#FFFFFF1A",
         "dl_text_dim": "#656565",
         "dl_text_muted": "#71d2ffe6",
-        "dl_text": "#c8f9ff",
+        "dl_text": "#A1A1A1",
         "dl_text_bright": "#FFFFFF",
         "dl_accent": "#00E8FF",
         "dl_accent_soft": "#00bbff",
@@ -31,15 +32,114 @@
             "bg": "var(dl_background)",
             "fg": "var(dl_text_bright)"
         },
+
+        // =========================================================
+        // MENÚ CONTEXTUAL Y MENÚ PRINCIPAL (Estilo DLUnire)
+        // =========================================================
         {
             "class": "menu",
             "layer0.texture": "",
             "layer0.tint": "var(dl_panel)",
+            "layer0.opacity": 1.0,
+            "layer1.texture": "",
+            "layer1.tint": "var(dl_border)",
+            "layer1.opacity": 1.0,
+            "layer1.draw_center": false,
+            "layer1.inner_margin": 1,
+            "content_margin": [4, 4]
+        },
+        {
+            "class": "menu_item",
+            "layer0.texture": "",
+            "layer0.tint": [0, 0, 0, 0],
+            "layer0.opacity": 1.0,
+            "content_margin": [12, 6]
+        },
+        {
+            "class": "menu_item",
+            "attributes": ["selected"],
+            "layer0.tint": "var(dl_hover)",
             "layer0.opacity": 1.0
+        },
+        {
+            "class": "menu_item",
+            "attributes": ["disabled"],
+            "layer0.opacity": 0.0
+        },
+        {
+            "class": "menu_item_label",
+            "color": "var(dl_text)",
+            "font.size": 11
+        },
+        {
+            "class": "menu_item_label",
+            "parents": [
+                {
+                    "class": "menu_item",
+                    "attributes": ["selected"]
+                }
+            ],
+            "color": "var(dl_text_bright)"
+        },
+        {
+            "class": "menu_item_label",
+            "parents": [
+                {
+                    "class": "menu_item",
+                    "attributes": ["disabled"]
+                }
+            ],
+            "color": "var(dl_text_dim)"
+        },
+        {
+            "class": "menu_item_shortcut",
+            "color": "var(dl_text_dim)",
+            "font.size": 10
+        },
+        {
+            "class": "menu_item_shortcut",
+            "parents": [
+                {
+                    "class": "menu_item",
+                    "attributes": ["selected"]
+                }
+            ],
+            "color": "var(dl_accent)"
+        },
+        {
+            "class": "menu_item_separator",
+            "layer0.texture": "",
+            "layer0.tint": "var(dl_separator)",
+            "layer0.opacity": 1.0,
+            "content_margin": [0, 4]
+        },
+        {
+            "class": "menu_item_arrow",
+            "layer0.tint": "var(dl_text)",
+            "layer0.opacity": 0.8
+        },
+        {
+            "class": "menu_item_arrow",
+            "parents": [
+                {
+                    "class": "menu_item",
+                    "attributes": ["selected"]
+                }
+            ],
+            "layer0.tint": "var(dl_accent)",
+            "layer0.opacity": 1.0
+        },
+        {
+            "class": "menu_item_checkbox",
+            "layer0.tint": "var(dl_accent)"
+        },
+        {
+            "class": "menu_item_radio",
+            "layer0.tint": "var(dl_accent)"
         },
 
         // =========================================================
-        // BARRA LATERAL (Sidebar) CON BORDE DERECHO
+        // BARRA LATERAL (Sidebar) CON BORDES Y SELECCIÓN DLUNIRE
         // =========================================================
         {
             "class": "sidebar_container",
@@ -79,12 +179,20 @@
         {
             "class": "tree_row",
             "attributes": ["hover"],
-            "layer0.tint": "var(dl_hover)"
+            "layer0.tint": "var(dl_hover)",
+            "layer0.opacity": 1.0
         },
         {
             "class": "tree_row",
             "attributes": ["selected"],
-            "layer0.tint": "var(dl_active)"
+            "layer0.tint": "var(dl_active)",
+            "layer0.opacity": 1.0,
+            // Indicador de borde izquierdo activo en cian DLUnire
+            "layer1.texture": "",
+            "layer1.tint": "var(dl_accent)",
+            "layer1.opacity": 1.0,
+            "layer1.draw_center": false,
+            "layer1.inner_margin": [2, 0, 0, 0]
         },
         {
             "class": "sidebar_label",
@@ -104,7 +212,8 @@
                     "attributes": ["selected"]
                 }
             ],
-            "color": "var(dl_accent)"
+            "color": "var(dl_accent)",
+            "font.bold": true
         },
 
         // Iconos de Carpetas y Desplegables
@@ -170,13 +279,14 @@
         },
 
         // =========================================================
-        // BARRA DE PESTAÑAS (Tabset Control & Tabs)
+        // BARRA DE PESTAÑAS (Tabset Control & Borde Inferior Completo)
         // =========================================================
         {
             "class": "tabset_control",
             "layer0.texture": "",
             "layer0.tint": "var(dl_tabbar)",
             "layer0.opacity": 1.0,
+            // Borde inferior continuo que delimita toda la barra de pestañas
             "layer1.texture": "",
             "layer1.tint": "var(dl_border_cyan)",
             "layer1.opacity": 1.0,
@@ -186,7 +296,7 @@
             "tab_min_width": 60,
             "tab_height": 36
         },
-        // Pestaña Inactiva
+        // Pestaña Inactiva (Con borde separador lateral y borde inferior cerrado)
         {
             "class": "tab_control",
             "layer0.texture": "",
@@ -196,7 +306,7 @@
             "layer1.tint": "var(dl_border_tab)",
             "layer1.opacity": 0.5,
             "layer1.draw_center": false,
-            "layer1.inner_margin": [0, 0, 1, 0],
+            "layer1.inner_margin": [0, 0, 1, 1],
             "content_margin": [16, 8]
         },
         // Pestaña Hover
@@ -209,16 +319,16 @@
             "layer1.tint": "var(dl_border_tab)",
             "layer1.opacity": 0.8,
             "layer1.draw_center": false,
-            "layer1.inner_margin": [0, 0, 1, 0]
+            "layer1.inner_margin": [0, 0, 1, 1]
         },
-        // Pestaña Activa / Seleccionada
+        // Pestaña Activa / Seleccionada (Borde superior acento, laterales cian, SIN borde inferior para fundirse con el editor)
         {
             "class": "tab_control",
             "attributes": ["selected"],
             "layer0.texture": "",
             "layer0.tint": "var(dl_tab_active)",
             "layer0.opacity": 1.0,
-            // Borde superior cian
+            // Borde superior cian eléctrico
             "layer1.texture": "",
             "layer1.tint": "var(dl_accent)",
             "layer1.opacity": 1.0,
