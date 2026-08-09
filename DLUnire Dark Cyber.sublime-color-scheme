@@ -1,5 +1,5 @@
 {
-    "name": "DLUnire Dark",
+    "name": "DLUnire Dark Cyber",
     "author": "dlunire",
     "variables": {
         "bg": "#010305",
@@ -9,21 +9,28 @@
         "fg": "#FFFFFF",
         "fg-muted": "#c8f9ff",
         "fg-dim": "#656565",
-        "border": "#2A3846",
+        "border": "#00bbff20",
         "line-highlight": "#0A1017",
         "selection": "#0091ff33",
         "list-selection": "#0D1B2A",
         "cyan": "#00E8FF",
-        "cyan-soft": "#A0E5FF",
+        "cyan-neon": "#00FFCC",
+        "cyan-soft": "#8afdff",
         "cyan-strong": "#00D0FF",
-        "green": "#00FF00",
+        "green-neon": "#00FFAA",
         "orange": "#FF6D00",
         "orange-soft": "#FF9100",
+        "amber": "#FFD580",
+        "purple-soft": "#B983FF",
+        "enum-cyan": "#33EEFF",
+        "operators-slate": "#5C7A88",
         "yellow": "#FFC600",
         "peach": "#FAA859",
         "purple": "#A0A0FF",
         "pink": "#F50057",
-        "teal": "#1DE9B6"
+        "red-neon": "#FF2A5F",
+        "teal": "#1DE9B6",
+        "string-cyber": "#ffffffc0"
     },
     "globals": {
         "background": "var(bg)",
@@ -36,7 +43,7 @@
         "selection_border": "var(border)",
         "inactive_selection": "var(bg-alt)",
         "gutter": "var(bg)",
-        "gutter_foreground": "var(border)",
+        "gutter_foreground": "var(operators-slate)",
         "guide": "var(border)",
         "active_guide": "var(cyan)",
         "stack_guide": "var(border)",
@@ -49,7 +56,7 @@
         "bracket_contents_foreground": "var(cyan-soft)",
         "tags_options": "stippled_underline",
         "shadow": "#00000055",
-        "misspelling": "var(pink)",
+        "misspelling": "var(red-neon)",
         "minimap_overlay": "#00E8FF1A",
         "minimap_border": "#00E8FF4D"
     },
@@ -68,12 +75,12 @@
         {
             "name": "Primitive types",
             "scope": "support.type, support.type.primitive, keyword.type, storage.type.primitive",
-            "foreground": "var(yellow)"
+            "foreground": "var(teal)"
         },
         {
             "name": "Strings",
             "scope": "string, string.quoted, string.template, string.regexp",
-            "foreground": "var(fg)"
+            "foreground": "var(string-cyber)"
         },
         {
             "name": "Numbers",
@@ -101,9 +108,29 @@
             "foreground": "var(cyan-soft)"
         },
         {
+            "name": "Inherited Classes",
+            "scope": "entity.other.inherited-class, meta.other.inherited-class",
+            "foreground": "var(cyan-strong)"
+        },
+        {
             "name": "Classes",
-            "scope": "entity.name.type, entity.name.class, entity.name.namespace, support.class, support.type.class, entity.name.struct, entity.name.interface, entity.name.enum, entity.name.trait",
-            "foreground": "var(green)"
+            "scope": "entity.name.type.class, entity.name.class, support.class, entity.name.trait",
+            "foreground": "var(green-neon)"
+        },
+        {
+            "name": "Interfaces",
+            "scope": "entity.name.interface, support.interface",
+            "foreground": "var(purple-soft)"
+        },
+        {
+            "name": "Structs",
+            "scope": "entity.name.struct, support.struct",
+            "foreground": "var(amber)"
+        },
+        {
+            "name": "Enums",
+            "scope": "entity.name.enum, support.enum, constant.other.enum",
+            "foreground": "var(enum-cyan)"
         },
         {
             "name": "Attributes / Decorators",
@@ -119,6 +146,11 @@
             "name": "HTML/XML Attributes",
             "scope": "entity.other.attribute-name.html, entity.other.attribute-name.xml",
             "foreground": "var(pink)"
+        },
+        {
+            "name": "Operators & Punctuation",
+            "scope": "keyword.operator, punctuation.separator, punctuation.terminator, punctuation.accessor",
+            "foreground": "var(operators-slate)"
         },
         {
             "name": "Markdown Headings",
@@ -157,7 +189,7 @@
         {
             "name": "Invalid",
             "scope": "invalid, invalid.illegal",
-            "foreground": "var(pink)",
+            "foreground": "var(red-neon)",
             "font_style": "underline"
         }
     ]

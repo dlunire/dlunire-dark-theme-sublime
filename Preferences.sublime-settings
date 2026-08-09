@@ -1,0 +1,10 @@
+{
+    "theme": "DLUnire Dark.sublime-theme",
+    "color_scheme": "DLUnire Dark.sublime-color-scheme",
+    "font_face": "Cascadia Code",
+    "font_size": 11,
+    "line_padding_top": 2,
+    "line_padding_bottom": 2,
+    "caret_style": "smooth",
+    "highlight_line": true
+}

@@ -1,0 +1,27 @@
+================================================================================
+DLUnire Dark — Sublime Text Theme & Color Schemes Suite
+================================================================================
+
+Thank you for installing DLUnire Dark!
+
+To activate the theme and color scheme, add the following to your Sublime Text
+Preferences (Preferences -> Settings):
+
+{
+    "theme": "DLUnire Dark.sublime-theme",
+    "color_scheme": "DLUnire Dark.sublime-color-scheme"
+}
+
+Available Color Schemes:
+  1. DLUnire Dark.sublime-color-scheme            (Ultra-Dark #010305, Classic Syntax)
+  2. DLUnire Dark Soft.sublime-color-scheme       (Graphite #07090b, Low Eye Fatigue)
+  3. DLUnire Dark Cyber.sublime-color-scheme      (Ultra-Dark #010305, Cyberpunk Neon Syntax)
+  4. DLUnire Dark Cyber Soft.sublime-color-scheme (Blue-Slate #04080C, Cyberpunk Neon Syntax)
+
+You can also switch themes and color schemes directly from the top menu:
+  Preferences -> Theme -> DLUnire Dark
+  Preferences -> Color Scheme -> DLUnire Dark -> [Variant]
+
+More info: https://github.com/dlunire/dlunire-dark-sublime
+Part of the DLUnire Ecosystem: https://dlunire.dev
+================================================================================

@@ -1,10 +1,10 @@
 {
-    "name": "DLUnire Dark",
+    "name": "DLUnire Dark Soft",
     "author": "dlunire",
     "variables": {
-        "bg": "#010305",
+        "bg": "#07090b",
         "bg-alt": "#05080C",
-        "bg-alt2": "#030508",
+        "bg-alt2": "#070a0d",
         "bg-input": "#080D14",
         "fg": "#FFFFFF",
         "fg-muted": "#c8f9ff",
@@ -13,7 +13,7 @@
         "line-highlight": "#0A1017",
         "selection": "#0091ff33",
         "list-selection": "#0D1B2A",
-        "cyan": "#00E8FF",
+        "cyan": "#00b3ff",
         "cyan-soft": "#A0E5FF",
         "cyan-strong": "#00D0FF",
         "green": "#00FF00",
@@ -50,8 +50,8 @@
         "tags_options": "stippled_underline",
         "shadow": "#00000055",
         "misspelling": "var(pink)",
-        "minimap_overlay": "#00E8FF1A",
-        "minimap_border": "#00E8FF4D"
+        "minimap_overlay": "#00b3ff1A",
+        "minimap_border": "#00b3ff4D"
     },
     "rules": [
         {

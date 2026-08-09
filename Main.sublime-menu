@@ -1,0 +1,68 @@
+[
+    {
+        "caption": "Preferences",
+        "mnemonic": "n",
+        "id": "preferences",
+        "children": [
+            {
+                "caption": "Color Scheme",
+                "mnemonic": "C",
+                "id": "color_scheme",
+                "children": [
+                    {
+                        "caption": "DLUnire Dark",
+                        "children": [
+                            {
+                                "caption": "DLUnire Dark",
+                                "command": "set_setting",
+                                "args": {
+                                    "setting": "color_scheme",
+                                    "value": "Packages/Theme - DLUnire Dark/DLUnire Dark.sublime-color-scheme"
+                                }
+                            },
+                            {
+                                "caption": "DLUnire Dark Soft",
+                                "command": "set_setting",
+                                "args": {
+                                    "setting": "color_scheme",
+                                    "value": "Packages/Theme - DLUnire Dark/DLUnire Dark Soft.sublime-color-scheme"
+                                }
+                            },
+                            {
+                                "caption": "DLUnire Dark Cyber",
+                                "command": "set_setting",
+                                "args": {
+                                    "setting": "color_scheme",
+                                    "value": "Packages/Theme - DLUnire Dark/DLUnire Dark Cyber.sublime-color-scheme"
+                                }
+                            },
+                            {
+                                "caption": "DLUnire Dark Cyber Soft",
+                                "command": "set_setting",
+                                "args": {
+                                    "setting": "color_scheme",
+                                    "value": "Packages/Theme - DLUnire Dark/DLUnire Dark Cyber Soft.sublime-color-scheme"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "caption": "Theme",
+                "mnemonic": "T",
+                "id": "theme",
+                "children": [
+                    {
+                        "caption": "DLUnire Dark",
+                        "command": "set_setting",
+                        "args": {
+                            "setting": "theme",
+                            "value": "DLUnire Dark.sublime-theme"
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+]
