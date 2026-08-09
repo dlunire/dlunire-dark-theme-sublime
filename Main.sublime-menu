@@ -17,7 +17,7 @@
                                 "command": "set_setting",
                                 "args": {
                                     "setting": "color_scheme",
-                                    "value": "Packages/Theme - DLUnire Dark/DLUnire Dark.sublime-color-scheme"
+                                    "value": "DLUnire Dark.sublime-color-scheme"
                                 }
                             },
                             {
@@ -25,7 +25,7 @@
                                 "command": "set_setting",
                                 "args": {
                                     "setting": "color_scheme",
-                                    "value": "Packages/Theme - DLUnire Dark/DLUnire Dark Soft.sublime-color-scheme"
+                                    "value": "DLUnire Dark Soft.sublime-color-scheme"
                                 }
                             },
                             {
@@ -33,7 +33,7 @@
                                 "command": "set_setting",
                                 "args": {
                                     "setting": "color_scheme",
-                                    "value": "Packages/Theme - DLUnire Dark/DLUnire Dark Cyber.sublime-color-scheme"
+                                    "value": "DLUnire Dark Cyber.sublime-color-scheme"
                                 }
                             },
                             {
@@ -41,7 +41,7 @@
                                 "command": "set_setting",
                                 "args": {
                                     "setting": "color_scheme",
-                                    "value": "Packages/Theme - DLUnire Dark/DLUnire Dark Cyber Soft.sublime-color-scheme"
+                                    "value": "DLUnire Dark Cyber Soft.sublime-color-scheme"
                                 }
                             }
                         ]
