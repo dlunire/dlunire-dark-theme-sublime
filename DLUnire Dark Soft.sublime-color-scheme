@@ -3,15 +3,15 @@
     "author": "dlunire",
     "variables": {
         "bg": "#07090b",
-        "bg-alt": "#05080C",
+        "bg-alt": "#0a0d10",
         "bg-alt2": "#070a0d",
-        "bg-input": "#080D14",
+        "bg-input": "#0c1015",
         "fg": "#FFFFFF",
-        "fg-muted": "#c8f9ff",
+        "fg-muted": "#A1A1A1",
         "fg-dim": "#656565",
         "border": "#2A3846",
         "line-highlight": "#0A1017",
-        "selection": "#0091ff33",
+        "selection": "#10324C",
         "list-selection": "#0D1B2A",
         "cyan": "#00b3ff",
         "cyan-soft": "#A0E5FF",
@@ -38,9 +38,7 @@
         "gutter": "var(bg)",
         "gutter_foreground": "var(border)",
         "guide": "var(border)",
-        "active_guide": "var(cyan)",
-        "stack_guide": "var(border)",
-        "highlight": "var(cyan)",
+        "active_guide": "var(cyan-soft)",
         "find_highlight": "var(yellow)",
         "find_highlight_foreground": "var(bg)",
         "brackets_options": "underline",
@@ -49,26 +47,9 @@
         "bracket_contents_foreground": "var(cyan-soft)",
         "tags_options": "stippled_underline",
         "shadow": "#00000055",
-        "misspelling": "var(pink)",
-        "minimap_overlay": "#00b3ff1A",
-        "minimap_border": "#00b3ff4D"
+        "misspelling": "var(pink)"
     },
     "rules": [
-        {
-            "name": "JSON Keys (Turquesa)",
-            "scope": "source.json meta.mapping.key, source.json meta.mapping.key string.quoted, meta.mapping.key.json string.quoted.double.json, meta.mapping.key.json, meta.structure.dictionary.key.json, support.type.property-name.json, entity.name.tag.json, source.yaml entity.name.tag, source.toml entity.name.tag",
-            "foreground": "var(cyan)"
-        },
-        {
-            "name": "JSON String Values (Naranja brillante)",
-            "scope": "source.json meta.mapping.value string.quoted, meta.mapping.value.json string.quoted.double.json, meta.mapping.value.json meta.string.json string.quoted.double.json",
-            "foreground": "var(orange-soft)"
-        },
-        {
-            "name": "JSON Separators",
-            "scope": "punctuation.separator.key-value.json, punctuation.separator.mapping, punctuation.separator.sequence.json",
-            "foreground": "var(cyan-soft)"
-        },
         {
             "name": "Comments",
             "scope": "comment, comment.block, comment.line, comment.block.documentation",
@@ -106,9 +87,9 @@
             "foreground": "var(cyan)"
         },
         {
-            "name": "Properties",
-            "scope": "variable.other.property, support.type.property-name, meta.property-name, entity.name.variable",
-            "foreground": "var(orange-soft)"
+            "name": "Properties (JSON & Object Keys)",
+            "scope": "variable.other.property, variable.other.member, support.type.property-name, meta.property-name, entity.name.variable, meta.mapping.key, entity.name.tag.yaml, entity.name.tag.json",
+            "foreground": "var(cyan)"
         },
         {
             "name": "Functions",
@@ -138,8 +119,7 @@
         {
             "name": "Markdown Headings",
             "scope": "markup.heading, markup.heading.markdown",
-            "foreground": "var(cyan-strong)",
-            "font_style": "bold"
+            "foreground": "var(cyan-strong)"
         },
         {
             "name": "Markdown Bold",
@@ -172,8 +152,18 @@
         {
             "name": "Invalid",
             "scope": "invalid, invalid.illegal",
-            "foreground": "var(pink)",
-            "font_style": "underline"
+            "foreground": "var(fg)",
+            "background": "var(pink)"
+        },
+        {
+            "name": "Diff Inserted",
+            "scope": "markup.inserted",
+            "foreground": "var(green)"
+        },
+        {
+            "name": "Diff Deleted",
+            "scope": "markup.deleted",
+            "foreground": "var(pink)"
         }
     ]
 }

@@ -7,30 +7,23 @@
         "bg-alt2": "#030508",
         "bg-input": "#080D14",
         "fg": "#FFFFFF",
-        "fg-muted": "#c8f9ff",
+        "fg-muted": "#A1A1A1",
         "fg-dim": "#656565",
-        "border": "#00bbff20",
+        "border": "#2A3846",
         "line-highlight": "#0A1017",
-        "selection": "#0091ff33",
+        "selection": "#10324C",
         "list-selection": "#0D1B2A",
-        "cyan": "#00E8FF",
-        "cyan-neon": "#00FFCC",
-        "cyan-soft": "#8afdff",
+        "cyan": "#00FFCC",
+        "cyan-soft": "#8AFDFF",
         "cyan-strong": "#00D0FF",
-        "green-neon": "#00FFAA",
+        "green": "#00FFAA",
         "orange": "#FF6D00",
         "orange-soft": "#FF9100",
-        "amber": "#FFD580",
-        "purple-soft": "#B983FF",
-        "enum-cyan": "#33EEFF",
-        "operators-slate": "#5C7A88",
         "yellow": "#FFC600",
         "peach": "#FAA859",
         "purple": "#A0A0FF",
-        "pink": "#F50057",
-        "red-neon": "#FF2A5F",
-        "teal": "#1DE9B6",
-        "string-cyber": "#ffffffc0"
+        "pink": "#FF2A5F",
+        "teal": "#1DE9B6"
     },
     "globals": {
         "background": "var(bg)",
@@ -43,11 +36,9 @@
         "selection_border": "var(border)",
         "inactive_selection": "var(bg-alt)",
         "gutter": "var(bg)",
-        "gutter_foreground": "var(operators-slate)",
+        "gutter_foreground": "var(border)",
         "guide": "var(border)",
-        "active_guide": "var(cyan)",
-        "stack_guide": "var(border)",
-        "highlight": "var(cyan)",
+        "active_guide": "var(cyan-soft)",
         "find_highlight": "var(yellow)",
         "find_highlight_foreground": "var(bg)",
         "brackets_options": "underline",
@@ -56,26 +47,9 @@
         "bracket_contents_foreground": "var(cyan-soft)",
         "tags_options": "stippled_underline",
         "shadow": "#00000055",
-        "misspelling": "var(red-neon)",
-        "minimap_overlay": "#00E8FF1A",
-        "minimap_border": "#00E8FF4D"
+        "misspelling": "var(pink)"
     },
     "rules": [
-        {
-            "name": "JSON Keys (Turquesa)",
-            "scope": "source.json meta.mapping.key, source.json meta.mapping.key string.quoted, meta.mapping.key.json string.quoted.double.json, meta.mapping.key.json, meta.structure.dictionary.key.json, support.type.property-name.json, entity.name.tag.json, source.yaml entity.name.tag, source.toml entity.name.tag",
-            "foreground": "var(cyan-neon)"
-        },
-        {
-            "name": "JSON String Values (Naranja brillante)",
-            "scope": "source.json meta.mapping.value string.quoted, meta.mapping.value.json string.quoted.double.json, meta.mapping.value.json meta.string.json string.quoted.double.json",
-            "foreground": "var(orange-soft)"
-        },
-        {
-            "name": "JSON Separators",
-            "scope": "punctuation.separator.key-value.json, punctuation.separator.mapping, punctuation.separator.sequence.json",
-            "foreground": "var(cyan-soft)"
-        },
         {
             "name": "Comments",
             "scope": "comment, comment.block, comment.line, comment.block.documentation",
@@ -95,7 +69,7 @@
         {
             "name": "Strings",
             "scope": "string, string.quoted, string.template, string.regexp",
-            "foreground": "var(string-cyber)"
+            "foreground": "var(fg)"
         },
         {
             "name": "Numbers",
@@ -113,9 +87,9 @@
             "foreground": "var(cyan)"
         },
         {
-            "name": "Properties",
-            "scope": "variable.other.property, support.type.property-name, meta.property-name, entity.name.variable",
-            "foreground": "var(orange-soft)"
+            "name": "Properties (JSON & Object Keys)",
+            "scope": "variable.other.property, variable.other.member, support.type.property-name, meta.property-name, entity.name.variable, meta.mapping.key, entity.name.tag.yaml, entity.name.tag.json",
+            "foreground": "var(cyan)"
         },
         {
             "name": "Functions",
@@ -123,29 +97,29 @@
             "foreground": "var(cyan-soft)"
         },
         {
-            "name": "Inherited Classes",
-            "scope": "entity.other.inherited-class, meta.other.inherited-class",
-            "foreground": "var(cyan-strong)"
-        },
-        {
             "name": "Classes",
-            "scope": "entity.name.type.class, entity.name.class, support.class, entity.name.trait",
-            "foreground": "var(green-neon)"
+            "scope": "entity.name.type, entity.name.class, entity.name.namespace, support.class, support.type.class, entity.name.struct, entity.name.interface, entity.name.enum, entity.name.trait",
+            "foreground": "var(green)"
         },
         {
             "name": "Interfaces",
             "scope": "entity.name.interface, support.interface",
-            "foreground": "var(purple-soft)"
+            "foreground": "#B983FF"
         },
         {
             "name": "Structs",
             "scope": "entity.name.struct, support.struct",
-            "foreground": "var(amber)"
+            "foreground": "#FFD580"
         },
         {
             "name": "Enums",
             "scope": "entity.name.enum, support.enum, constant.other.enum",
-            "foreground": "var(enum-cyan)"
+            "foreground": "#33EEFF"
+        },
+        {
+            "name": "Operators & Punctuation",
+            "scope": "keyword.operator, punctuation.separator, punctuation.terminator, punctuation.accessor",
+            "foreground": "#5C7A88"
         },
         {
             "name": "Attributes / Decorators",
@@ -163,15 +137,9 @@
             "foreground": "var(pink)"
         },
         {
-            "name": "Operators & Punctuation",
-            "scope": "keyword.operator, punctuation.separator, punctuation.terminator, punctuation.accessor",
-            "foreground": "var(operators-slate)"
-        },
-        {
             "name": "Markdown Headings",
             "scope": "markup.heading, markup.heading.markdown",
-            "foreground": "var(cyan-strong)",
-            "font_style": "bold"
+            "foreground": "var(cyan-strong)"
         },
         {
             "name": "Markdown Bold",
@@ -204,8 +172,18 @@
         {
             "name": "Invalid",
             "scope": "invalid, invalid.illegal",
-            "foreground": "var(red-neon)",
-            "font_style": "underline"
+            "foreground": "var(fg)",
+            "background": "var(pink)"
+        },
+        {
+            "name": "Diff Inserted",
+            "scope": "markup.inserted",
+            "foreground": "var(green)"
+        },
+        {
+            "name": "Diff Deleted",
+            "scope": "markup.deleted",
+            "foreground": "var(pink)"
         }
     ]
 }
