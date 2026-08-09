@@ -55,6 +55,21 @@
     },
     "rules": [
         {
+            "name": "JSON Keys (Turquesa)",
+            "scope": "source.json meta.mapping.key, source.json meta.mapping.key string.quoted, meta.mapping.key.json string.quoted.double.json, meta.mapping.key.json, meta.structure.dictionary.key.json, support.type.property-name.json, entity.name.tag.json, source.yaml entity.name.tag, source.toml entity.name.tag",
+            "foreground": "var(cyan)"
+        },
+        {
+            "name": "JSON String Values (Naranja brillante)",
+            "scope": "source.json meta.mapping.value string.quoted, meta.mapping.value.json string.quoted.double.json, meta.mapping.value.json meta.string.json string.quoted.double.json",
+            "foreground": "var(orange-soft)"
+        },
+        {
+            "name": "JSON Separators",
+            "scope": "punctuation.separator.key-value.json, punctuation.separator.mapping, punctuation.separator.sequence.json",
+            "foreground": "var(cyan-soft)"
+        },
+        {
             "name": "Comments",
             "scope": "comment, comment.block, comment.line, comment.block.documentation",
             "foreground": "var(fg-dim)",
@@ -74,16 +89,6 @@
             "name": "Strings",
             "scope": "string, string.quoted, string.template, string.regexp",
             "foreground": "var(fg)"
-        },
-        {
-            "name": "JSON / Object Keys",
-            "scope": "meta.mapping.key, meta.mapping.key string, meta.mapping.key.json, source.json meta.mapping.key string, support.type.property-name.json, entity.name.tag.json, meta.structure.dictionary.key string, source.yaml entity.name.tag, source.toml entity.name.tag",
-            "foreground": "var(cyan)"
-        },
-        {
-            "name": "JSON / Object Separators",
-            "scope": "punctuation.separator.key-value.json, punctuation.separator.mapping, punctuation.separator.key-value",
-            "foreground": "var(orange)"
         },
         {
             "name": "Numbers",
