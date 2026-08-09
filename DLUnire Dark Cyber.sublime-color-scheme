@@ -7,12 +7,11 @@
         "bg-alt2": "#030508",
         "bg-input": "#080D14",
         "fg": "#FFFFFF",
-        "fg-muted": "#A1A1A1",
+        "fg-muted": "#c8f9ff",
         "fg-dim": "#656565",
         "border": "#2A3846",
         "line-highlight": "#0A1017",
-        "selection": "#10324C",
-        "list-selection": "#0D1B2A",
+        "selection": "#0D1B2A",
         "cyan": "#00FFCC",
         "cyan-soft": "#8AFDFF",
         "cyan-strong": "#00D0FF",
@@ -67,9 +66,14 @@
             "foreground": "var(teal)"
         },
         {
-            "name": "Strings",
+            "name": "Strings (White for high readability)",
             "scope": "string, string.quoted, string.template, string.regexp",
             "foreground": "var(fg)"
+        },
+        {
+            "name": "JSON & Object Keys (Turquoise)",
+            "scope": "meta.mapping.key.json string.quoted.double.json, meta.mapping.key string, meta.mapping.key, variable.other.property, variable.other.member, support.type.property-name, meta.property-name, entity.name.tag.json, entity.name.tag.yaml",
+            "foreground": "var(cyan)"
         },
         {
             "name": "Numbers",
@@ -84,11 +88,6 @@
         {
             "name": "Variables",
             "scope": "variable, variable.parameter, variable.other, variable.language, variable.object",
-            "foreground": "var(cyan)"
-        },
-        {
-            "name": "Properties (JSON & Object Keys)",
-            "scope": "variable.other.property, variable.other.member, support.type.property-name, meta.property-name, entity.name.variable, meta.mapping.key, entity.name.tag.yaml, entity.name.tag.json",
             "foreground": "var(cyan)"
         },
         {

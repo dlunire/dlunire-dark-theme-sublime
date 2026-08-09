@@ -4,12 +4,13 @@
         "bg": "#010305",
         "bg-alt": "#05080C",
         "bg-alt2": "#030508",
+        "bg-input": "#080D14",
         "fg": "#FFFFFF",
-        "fg-muted": "#A1A1A1",
+        "fg-muted": "#c8f9ff",
         "fg-dim": "#656565",
         "border": "#2A3846",
         "line-highlight": "#0A1017",
-        "selection": "#10324C",
+        "selection": "#0D1B2A",
         "cyan": "#00E8FF",
         "cyan-soft": "#A0E5FF",
         "orange": "#FF6D00",
@@ -18,14 +19,24 @@
     },
     "rules": [
         {
+            "class": "title_bar",
+            "style": "dark",
+            "bg": "var(bg)",
+            "fg": "var(fg)"
+        },
+        {
             "class": "sidebar_container",
             "layer0.tint": "var(bg-alt2)",
             "layer0.opacity": 1.0
         },
         {
             "class": "sidebar_tree",
-            "layer0.tint": "var(bg-alt2)",
-            "layer0.opacity": 1.0
+            "row_padding": [
+                14,
+                4
+            ],
+            "indent_offset": 12,
+            "indent": 14
         },
         {
             "class": "sidebar_heading",
@@ -35,18 +46,6 @@
         {
             "class": "sidebar_label",
             "color": "var(fg-muted)"
-        },
-        {
-            "class": "sidebar_label",
-            "parents": [
-                {
-                    "class": "tree_row",
-                    "attributes": [
-                        "selected"
-                    ]
-                }
-            ],
-            "color": "var(cyan)"
         },
         {
             "class": "tree_row",
@@ -65,13 +64,51 @@
             "layer0.opacity": 1.0
         },
         {
+            "class": "sidebar_label",
+            "parents": [
+                {
+                    "class": "tree_row",
+                    "attributes": [
+                        "hover"
+                    ]
+                }
+            ],
+            "color": "var(fg)"
+        },
+        {
+            "class": "sidebar_label",
+            "parents": [
+                {
+                    "class": "tree_row",
+                    "attributes": [
+                        "selected"
+                    ]
+                }
+            ],
+            "color": "var(cyan)",
+            "font.bold": true
+        },
+        {
             "class": "tabset_control",
             "layer0.tint": "var(bg-alt)",
-            "layer0.opacity": 1.0
+            "layer0.opacity": 1.0,
+            "tab_height": 34
         },
         {
             "class": "tab_control",
             "layer0.tint": "var(bg-alt)",
+            "layer0.opacity": 1.0,
+            "content_margin": [
+                14,
+                4
+            ]
+        },
+        {
+            "class": "tab_control",
+            "attributes": [
+                "hover"
+            ],
+            "layer0.tint": "var(line-highlight)",
             "layer0.opacity": 1.0
         },
         {
@@ -83,17 +120,20 @@
             "layer0.opacity": 1.0
         },
         {
-            "class": "tab_control",
-            "attributes": [
-                "hover",
-                "!selected"
-            ],
-            "layer0.tint": "var(line-highlight)",
-            "layer0.opacity": 0.6
+            "class": "tab_label",
+            "color": "var(fg)"
         },
         {
             "class": "tab_label",
-            "color": "var(fg)"
+            "parents": [
+                {
+                    "class": "tab_control",
+                    "attributes": [
+                        "hover"
+                    ]
+                }
+            ],
+            "color": "var(cyan-soft)"
         },
         {
             "class": "tab_label",
@@ -116,6 +156,76 @@
             "color": "var(orange-soft)"
         },
         {
+            "class": "tab_close_button",
+            "layer0.tint": "var(fg-dim)",
+            "layer0.opacity": 0.7
+        },
+        {
+            "class": "tab_close_button",
+            "parents": [
+                {
+                    "class": "tab_control",
+                    "attributes": [
+                        "hover"
+                    ]
+                }
+            ],
+            "layer0.tint": "var(fg)",
+            "layer0.opacity": 1.0
+        },
+        {
+            "class": "tab_close_button",
+            "parents": [
+                {
+                    "class": "tab_control",
+                    "attributes": [
+                        "selected"
+                    ]
+                }
+            ],
+            "layer0.tint": "var(cyan)",
+            "layer0.opacity": 1.0
+        },
+        {
+            "class": "tab_close_button",
+            "attributes": [
+                "hover"
+            ],
+            "layer0.tint": "var(pink)",
+            "layer0.opacity": 1.0
+        },
+        {
+            "class": "scroll_bar_control",
+            "layer0.tint": "var(bg)",
+            "layer0.opacity": 1.0
+        },
+        {
+            "class": "scroll_track_control",
+            "layer0.tint": "var(bg-alt2)",
+            "layer0.opacity": 0.5
+        },
+        {
+            "class": "puck_control",
+            "layer0.tint": "var(cyan)",
+            "layer0.opacity": 0.35
+        },
+        {
+            "class": "puck_control",
+            "attributes": [
+                "hover"
+            ],
+            "layer0.tint": "var(cyan)",
+            "layer0.opacity": 0.75
+        },
+        {
+            "class": "puck_control",
+            "attributes": [
+                "pressed"
+            ],
+            "layer0.tint": "var(cyan)",
+            "layer0.opacity": 1.0
+        },
+        {
             "class": "status_bar",
             "layer0.tint": "var(bg)",
             "layer0.opacity": 1.0
@@ -124,63 +234,32 @@
             "class": "label_control",
             "parents": [
                 {
-                    "class": "status_container"
+                    "class": "status_bar"
                 }
             ],
             "color": "var(fg-muted)"
         },
         {
-            "class": "scroll_bar_control",
+            "class": "panel_control",
             "layer0.tint": "var(bg-alt)",
-            "layer0.opacity": 0.6
-        },
-        {
-            "class": "scroll_track_control",
-            "layer0.tint": "var(bg-alt2)",
-            "layer0.opacity": 0.3
-        },
-        {
-            "class": "puck_control",
-            "layer0.tint": "var(cyan-soft)",
-            "layer0.opacity": 0.4
-        },
-        {
-            "class": "overlay_control",
-            "layer0.tint": "var(bg-alt2)",
             "layer0.opacity": 1.0
         },
         {
-            "class": "quick_panel_label",
-            "fg": "var(fg)",
-            "match_fg": "var(cyan)",
-            "selected_fg": "var(cyan)",
-            "selected_match_fg": "var(orange-soft)",
-            "bg": "var(bg-alt2)"
-        },
-        {
-            "class": "quick_panel_path_label",
-            "fg": "var(fg-dim)"
-        },
-        {
-            "class": "popup_control",
-            "layer0.tint": "var(bg-alt2)",
+            "class": "text_line_control",
+            "layer0.tint": "var(bg-input)",
             "layer0.opacity": 1.0
-        },
-        {
-            "class": "title_bar",
-            "style": "dark"
-        },
-        {
-            "class": "title_bar",
-            "platforms": [
-                "osx"
-            ],
-            "fg": "var(fg)",
-            "bg": "var(bg)"
         },
         {
             "class": "button_control",
-            "layer0.tint": "var(bg-alt)",
+            "layer0.tint": "var(line-highlight)",
+            "layer0.opacity": 1.0
+        },
+        {
+            "class": "button_control",
+            "attributes": [
+                "hover"
+            ],
+            "layer0.tint": "var(selection)",
             "layer0.opacity": 1.0
         },
         {
@@ -190,11 +269,46 @@
                     "class": "button_control"
                 }
             ],
-            "color": "var(fg)"
+            "color": "var(fg)",
+            "font.bold": true
         },
         {
-            "class": "text_line_control",
-            "color_scheme_tint": "var(bg-alt2)"
+            "class": "label_control",
+            "parents": [
+                {
+                    "class": "button_control",
+                    "attributes": [
+                        "hover"
+                    ]
+                }
+            ],
+            "color": "var(cyan)"
+        },
+        {
+            "class": "icon_button_control",
+            "attributes": [
+                "hover"
+            ],
+            "layer0.tint": "var(line-highlight)",
+            "layer0.opacity": 0.8
+        },
+        {
+            "class": "icon_button_control",
+            "attributes": [
+                "selected"
+            ],
+            "layer0.tint": "var(selection)",
+            "layer0.opacity": 1.0
+        },
+        {
+            "class": "overlay_control",
+            "layer0.tint": "var(bg-alt2)",
+            "layer0.opacity": 1.0
+        },
+        {
+            "class": "popup_control",
+            "layer0.tint": "var(bg-alt2)",
+            "layer0.opacity": 1.0
         }
     ]
 }
